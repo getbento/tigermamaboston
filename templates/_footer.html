@@ -1,0 +1,43 @@
+<div id="footer">
+
+  <!-- Logo and Address Block -->
+  <section class="address wow fadeIn">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <a href="/" class="logo-mark"><img src="{{static('/images/logo-q.png')}}" ></a>
+
+          {% set location=boxes.locations.all.0 %}
+          <a class="address white" target="_blank" href="https://www.google.com/maps/place/{{ location.street }} {{ location.city }} {{ location.state }}, {{ location.postal_code }}">
+            {{ location.street }}<br>{{ location.city }} {{ location.state }}, {{ location.postal_code }}
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="container-fluid">
+      <a href="/jobs"><button class="btn btn-primary">Jobs</button></a>
+      <button class="btn btn-primary" data-toggle="modal" data-target="#modal-email-signup">Mailing List</button>
+    </div>
+
+    {% include '_mailinglist.html' with context %}
+
+  </section>
+
+
+  <!-- Hours Block -->
+  <section class="hours wow fadeIn" id="hours">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Hours</h1>
+          {{ location.hours }}
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</div>

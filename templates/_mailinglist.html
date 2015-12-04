@@ -1,0 +1,38 @@
+<!-- Join Mailing List Section Modal -->
+
+<div class="modal fade" id="modal-email-signup" tabindex="-1" role="dialog" aria-labelledby="modal-email-signup-label" aria-hidden="true">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+
+
+
+
+
+
+  <div class="modal-dialog" style="max-width: 520px !important;">
+    <div class="modal-content">
+
+      {% import 'forms.html' as forms with context %}
+      {% call forms.newsletter_form() %}
+        <div class="modal-header">
+          <h2 class="brandon uppercase pink bold">Join Our Mailing List</h2>
+        </div>
+        <div class="modal-body">
+          <div class="form-group row">
+            <div class="col-sm-8">
+              <label for="email" class="sr-only">Enter Email*</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email*">
+            </div>
+            <div class="col-sm-4">
+              <button type="submit" class="btn btn-primary btn-submit submit-post">Sign Up</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <p class="error-msg">Please complete all required fields</p>
+          <p class="success-msg">Success! Thank you for your submission.</p>
+        </div>
+      {% endcall %}
+    </div>
+  </div>
+</div>

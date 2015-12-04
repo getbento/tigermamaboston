@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="menu">
+
+<!-- Initial Splash Screen -->
+<section class="splash" style="background-image:url('{{current.fields.splash.image}}')">
+  <div class="wrapper">
+    <div class="container">
+      <h1 class="big-hero">{{ current.fields.splash.title }}</h1>
+      <p>{{ current.fields.splash.subtitle }}</p>
+
+      <ul class="nav nav-tabs" role="tablist">
+        {% for category in boxes.menus.categories|rejectattr("name", "equalto", "Uncategorized") %}
+          <li role="presentation" class="{% if loop.first %}active{% endif %}"><a href="#{{ category.slug }}" role="tab" data-toggle="tab"><button class="btn btn-default">{{ category.name }}</button></a></li>
+        {% endfor %}
+      </ul>
+
+    </div>
+  </div>
+
+  <!-- Squeeze Reservations in This Block -->
+  {% include '_reservations.html' with context %}
+
+</section>
+
+
+<section class="tab-content">
+  {% for category in boxes.menus.categories|rejectattr("name", "equalto", "Uncategorized") %}
+
+    <div role="tabpanel" class="tab-pane {% if loop.first %}active{% endif %} menu" id="{{ category.slug }}">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="container">
+            <div class="col-sm-12">
+              <h1 class="uppercase brandon light">{{ category.name }}</h1>
+            </div>
+          </div>
+        </div>
+
+        {% for menu in category.all %}
+          {% if menu.sections|length > 1 %}
+            <div id="{{ menu.slug }}" class="listing row {% if loop.index is divisibleby 2 %}row-2{% else %}row-1{% endif %} ">
+
+              <div class="container">
+                <!-- Menu Content -->
+                <p>{{ menu.description }}</p>
+
+                {% for section in menu.sections %}
+                  <div class="col-sm-6 menu-column">
+                    <p>{{ section.description }}</p>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+
+      </div>
+    </div>
+
+  {% endfor %}
+
+</section>
+
+</div>
+
+{% endblock %}

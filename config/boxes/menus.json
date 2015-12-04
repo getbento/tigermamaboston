@@ -1,0 +1,15 @@
+{
+  name: "Menus",
+  "engine": "menu",
+  has_categories: true,
+  fields: {
+    subheading: {
+      title: "Subheading",
+      type: "text"
+    },
+    sectionprice: {
+      title: "Section Price",
+      type: "text"
+    }
+  }
+}

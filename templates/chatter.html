@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div id="chatter">
+
+  <!-- Splash Section Template -->
+  {% include '_splash.html' with context %}
+
+  <!-- Press Boxes -->
+  <section class="press">
+    <div class="container-fluid">
+      <div class="row">
+
+      {% for article in boxes.press.all %}
+        <div class="col-md-3 col-sm-4 press-box wow fadeIn">
+          <a href="{{ article.external_url }}" target="_blank">
+            <div class="container">
+              {% if article.image %}
+                <div class="press-image desaturate" style="background-image:url('{{ article.image }}')">
+                </div>
+              {% endif %}
+              <h3 class="brandon light">{{ article.name }}</h3>
+              <a href="{{ article.external_url }}" class="source" target="_blank">{{ article.source }}</a>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+
+      </div>
+
+    </div>
+  </section>
+</div>
+{% endblock %}

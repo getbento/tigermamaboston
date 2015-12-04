@@ -1,0 +1,17 @@
+{
+  name: "Team",
+  fields: {
+    "title": {
+      "title": "Title",
+      "type": "text"
+    },
+    "picture": {
+      "title": "Picture",
+      "type": "image"
+    },
+    "bio": {
+      "title": "Bio",
+      "type": "wysiwyg"
+    }
+  }
+}

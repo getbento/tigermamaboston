@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- POWERED BY BENTO -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}{% if current.name != "Home" %}{{ current.name }} - {% endif %}{{ account.site.title }}{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}{{ account.site.meta_description }}{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}{{ account.site.meta_keywords }}{% endblock %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Revisit-After" content="5 Days">
+    <meta name="Distribution" content="Global">
+    <meta name="Rating" content="General">
+    <meta property="og:type" content="restaurant.restaurant" />
+
+    <!-- Editable Content -->
+    <meta property="restaurant:contact_info:street_address">
+    <meta property="restaurant:contact_info:locality">
+    <meta property="restaurant:contact_info:region">
+    <meta property="restaurant:contact_info:postal_code">
+    <meta property="restaurant:contact_info:country_name">
+    <meta property="restaurant:contact_info:phone_number">
+    <meta property="restaurant:contact_info:website">
+    <meta name="Copyright">
+    <!-- End Editable Content -->
+
+
+    <!-- FavIcon -->
+    <link rel="icon" href="{{ account.site.favicon }}" />
+
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="{{static('/css/bootstrap.css')}}" />
+    <link rel="stylesheet" href="{{static('/css/bootstrap-theme.css')}}" />
+    <link rel="stylesheet" href="{{static('/css/bootstrap-datetimepicker.css')}}" />
+    <link rel="stylesheet" href="{{static('/css/bootstrap-datepicker.css')}}" />
+    <link rel="stylesheet" href="{{static('/css/selectordie.css')}}" />
+    <link rel="stylesheet" href="{{static('/css/ss-icons.css')}}" />
+    <link rel="stylesheet" href="{{static('/css/animate.css')}}" />
+    <link rel="stylesheet" href="{{static('/css/remodal.css')}}" />
+    <link rel="stylesheet" href="{{static('/css/remodal-default-theme.css')}}" />
+
+
+    <!-- SweetCheeks SCSS -->
+    <link rel="stylesheet" href="{{ scss('/scss/main.scss') }}" />
+
+
+    <!--[if lte IE 9]>
+      <link rel="stylesheet" href="{{static('/css/ie9.css')}}" />
+    <![endif]-->
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" ref="{{static('/css/ie8.css')}}" />
+    <![endif]-->
+
+    <!-- JS Dependencies -->
+    <script src="{{static('/js/vendor/jquery-1.11.1.min.js')}}"></script>
+    <script src="{{static('/js/vendor/modernizr-2.8.3.js')}}"></script>
+    <script src="{{static('/js/vendor/bootstrap.js')}}"></script>
+    <script src="{{static('/js/vendor/underscore.min.js')}}"></script>
+    <script src="{{static('/js/vendor/moment-with-locales.js')}}"></script>
+    <script src="{{static('/js/vendor/selectordie.js')}}"></script>
+    <script src="{{static('/js/vendor/bootstrap-datepicker.min.js')}}"></script>
+    <script src="{{static('/js/vendor/bootstrap-date-time-picker.js')}}"></script>
+    <script src="{{static('/js/vendor/wow.js')}}"></script>
+    <script src="{{static('/js/vendor/remodal.min.js')}}"></script>
+
+    <!-- SweetCheeks JS -->
+    <script src="{{static('/js/site.js')}}"></script>
+
+    <!-- Typekit -->
+<!--    <script src="https://use.typekit.net/ubj0aqr.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script> -->
+
+<script src="https://use.typekit.net/jpj2mjx.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+
+  </head>
+
+  <body>
+
+    {% include '_header.html' with context %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include '_footer.html' with context %}
+    <div id="powered-by">
+        <p><a href="getbento.com/?utm_source=footer&utm_campaign=sweetcheeksq">Powered by BentoBox</a></p>
+    </div>
+  </body>
+</html>

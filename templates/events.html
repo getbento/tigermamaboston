@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div id="events">
+  <!-- Splash Section Template -->
+  {% include '_splash.html' with context %}
+
+  <!-- Info -->
+  <section class="info wow fadeIn" id="info">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <h2 class="brandon light uppercase">{{ current.fields.info.title }}</h2>
+          <div>
+            {{ current.fields.info.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Photo Grid -->
+
+  <section class="grid wow fadeIn">
+    <div class="container-fluid">
+
+    {% for gallery in boxes.galleries.all %}
+      {% if gallery.name == "Events" %}
+        <div class="row">
+          {% for image in gallery.images %}
+
+            {% if loop.index is divisibleby 3 %}
+              <div class="col-sm-12 desaturate-desktop-only" style="background-image:url('{{image}}')">
+              </div>
+            {% else %}
+              <div class="col-sm-6 desaturate-desktop-only" style="background-image:url('{{image}}')">
+              </div>
+            {% endif %}
+
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+    </div>
+  </section>
+
+
+  <section class="form wow fadeIn" id="events-form">
+    <div class="container">
+
+      {% import 'forms.html' as forms with context %}
+      {% call forms.email_form("events") %}
+
+        <h2 class="brandon bold uppercase pink">Your contact info</h2>
+        <div class="row">
+          <div class="form-group col-sm-6">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" name="First Name">
+          </div>
+          <div class="form-group col-sm-6">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="Last Name">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="Email">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <label for="phone">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" name="Phone Number">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <label for="company">Company</label>
+            <input type="text" class="form-control" id="company" name="Company">
+          </div>
+        </div>
+
+
+        <h2 class="brandon bold uppercase pink">Your event details</h2>
+
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <label for="event-type">Occassion</label>
+            <div>
+              <select class="form-control">
+                <option selected="selected" disabled>Type of event</option>
+
+                {% for occasion in current.fields.form.occasions %}
+                  <option value="{{ occasion.title }}">{{occasion.title}}</option>
+                {% endfor %}
+
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <label for="date">Event Date</label>
+            <input type='text' class="form-control date-icon" id="datepicker-events" name="Date" />
+            <!-- <input type="date" class="form-control" id="date" placeholder="Date" value="Date"> -->
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <label for="start-time">Start Time</label>
+            <input type='text' class="form-control" id="start-time-events" name="Time"/>
+            <!-- <input type="time" class="form-control" id="time" placeholder="Time"> -->
+          </div>
+          <div class="col-sm-6">
+            <label for="time">End Time</label>
+            <input type='text' class="form-control" id="end-time-events" name="Time"/>
+  <!--           <input type="time" class="form-control" id="time" placeholder="Time">
+   -->        </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <label for="count">Number of people</label>
+            <input type="count" class="form-control" id="count" name="count">
+          </div>
+        </div>
+
+
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <label for="additional">Additional information</label>
+            <textarea id="additional" class="form-control" rows="4" name="Additional Info"></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <br><br>
+            <p class="error-msg">Please complete all required fields</p>
+            <p class="success-msg">Success! Thank you for your submission. Someone will be in touch with you shortly.</p>
+            <button type="submit" class="btn btn-primary btn-submit submit-post">submit</button>
+          </div>
+        </div>
+
+      {% endcall %}
+
+    </div>
+  </section>
+
+
+  <!-- Partner Logos -->
+  <section class="info wow fadeIn" id="info">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <h2 class="brandon light uppercase">{{ current.fields.logos.title }}</h2>
+          <div>
+            {{ current.fields.logos.description }}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          {% for logo in current.fields.logos.logomarks %}
+            <div class="partner-logo-wrapper col-sm-4 col-md-3 col-xs-6">
+              <div class="partner-logo" style="background-image: url('{{ logo.image }}')">
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</div>
+{% endblock %}

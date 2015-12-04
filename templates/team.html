@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div id="team">
+
+  <!-- Splash Section Template -->
+  {% include '_splash.html' with context %}
+
+  <!-- Team Section -->
+
+    <section class="members">
+
+      <div class="container-fluid">
+
+        <!-- Alternating classes for backgrounds and float -->
+        {% for member in boxes.team.all %}
+
+        <div data-remodal-target="{{member.name|slugify}}" class="member row listing {% if loop.index is divisibleby 2 %}row-2{% else %}row-1{% endif %} wow fadeIn">
+          <div class="static">
+            <div class="container">
+              <div class="col-sm-5 {% if loop.index is divisibleby 2 %}right{% else %}left{% endif %}">
+               <div class="circle2" {% if member.fields.picture %} style="background-image:url('{{ member.fields.picture }}')" {% endif %}></div>
+              </div>
+              <div class="col-sm-7 center">
+                <h2 class="brandon bold uppercase">{{ member.name }}</h2>
+                <p>{{ member.fields.title }}</p>
+                <button class="btn btn-primary hidden-sm hidden-md hidden-lg" href="#{{member.name|slugify}}">Read More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+
+
+      </div>
+
+
+
+    </section>
+
+</div>
+
+<!-- Modals -->
+
+{% for member in boxes.team.all %}
+
+  <div class="remodal team-modal" data-remodal-id="{{member.name | slugify }}" tabindex="-1" role="dialog" aria-labelledby="{{member.name | slugify }}-label" aria-hidden="true">
+    <button type="button" class="close" data-remodal-action="cancel"><span aria-hidden="true">&times;</span></button>
+
+    <div class="container">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h2 class="brandon bold uppercase white">{{ member.name }}</h2>
+        <span class="white">{{member.fields.title}}</span></br>
+        <br>
+        <p class="white">{{member.fields.bio}}</p>
+      </div>
+    </div>
+
+  </div>
+
+{% endfor %}
+
+{% endblock %}

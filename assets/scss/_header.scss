@@ -1,0 +1,88 @@
+@import "variables";
+
+// Superheader
+
+.superheader { display: block; background-color: rgba(0,0,0,1); min-height: 60px; padding-top: 12px; font-size: 12px;}
+.superheader .glyphicon {color: $pink; border: 1px solid $pink; border-radius: 100px; padding: 7px; margin-right: 5px;}
+.superheader .phone, .superheader .location {color: $grey; letter-spacing: 1px; margin-right: 10px; margin-left: 5px; a {color: $grey;}}
+.superheader .hidden-lg .btn {width: 100%;}
+
+.social {font-size: 28px;}
+.social .ss-icon {margin-right: 12px;}
+
+.col-xs-6.call {padding-right: 5px;}
+.col-xs-6.address {padding-left: 5px;}
+.btn.reservations {margin-top: 8px; margin-bottom: 8px}
+
+
+// Header
+
+#headers {position: absolute; z-index: 10; width: 100%; display: block;}
+.navbar-default {
+  box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;
+  margin-bottom: 0;
+}
+.nav {
+  font-weight: 600;
+  font-size: 16px;
+  .Home {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+  .Jobs {display: none;}
+}
+
+.navbar-nav > li {
+  padding: 0 30px;
+  &:last-child {
+    @media (min-width: 1400px) {
+      padding-right: 0;
+    }
+  }
+}
+
+.navbar-nav > li.selected a {
+  @media (min-width: 1400px) {
+    padding-right: 0;
+    border-color: $white;
+  }
+}
+.navbar-nav > li > a {
+  letter-spacing: 1px;
+  border-bottom: 2px solid transparent;
+  transition: 1s; -webkit-transition: 1s; -moz-transition: 1s;
+  padding-bottom: 15px;
+  &:hover {border-color: $white; }
+  @media (min-width: 1400px) {
+    padding: 50px 0 5px 0 !important;
+  }
+}
+
+.logo img {
+  margin-top: 20px;
+  @media (max-width: 1399px) {
+    width: 128px;
+    height: 68px;
+    margin-left: 25px;
+  }
+  width: 176px;
+  height: 95px;
+}
+
+
+
+#main-nav, #mobile-nav, .navbar-header {border: none; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;}
+
+#main-nav.active .container {height: 100%}
+#main-nav.active #mobile-nav {height: 100%}
+
+#mobile-nav.in, #mobile-nav.collapsing  {
+  background-color: rgba(0,0,0,1);
+  text-align: center;
+}
+
+.navbar-header.background {background-color: rgba(0,0,0,1);}
+
+#mobile-nav .social {padding-bottom: 25px;}
+

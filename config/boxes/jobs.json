@@ -1,0 +1,17 @@
+{
+  name: "Jobs",
+  fields: {
+    "subheading": {
+      "title": "Subheading",
+      "type": "text"
+    },
+    "description": {
+      "title": "Description",
+      "type": "wysiwyg"
+    },
+    "button": {
+      "title": "Apply Now Link",
+      "type": "text"
+    }
+  }
+}

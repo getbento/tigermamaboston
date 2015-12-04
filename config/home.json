@@ -1,0 +1,97 @@
+{
+  name: "Home",
+
+
+  // Sections and Editable Fields
+
+  fields: {
+    //Splash Section
+    splash: {
+      title: "Hero",
+      type: "section",
+      items: {
+        title: "text",
+        subtitle: "wysiwyg",
+        image: "image",
+        "button1_text": {
+          "title": "Button #1 Text",
+          "type": "text"
+        },
+        "button1_target": {
+          "title": "Button #1 Target",
+          "type": "text"
+        },
+        "button2_text": {
+          "title": "Button #2 Text",
+          "type": "text"
+        },
+        "button2_target": {
+          "title": "Button #2 Target",
+          "type": "text"
+        }
+      }
+    },
+
+    // Grid Section
+    grid1: {
+      title: "Grid 1",
+      type: "section",
+      items: {
+        title: "text",
+        image: "image",
+        link: "text"
+      }
+    },
+    grid2: {
+      title: "Grid 2",
+      type: "section",
+      items: {
+        title: "text",
+        image: "image",
+        link: "text"
+      }
+    },
+    grid3: {
+      title: "Grid 3",
+      type: "section",
+      items: {
+        title: "text",
+        image: "image",
+        link: "text"
+      }
+    },
+    grid4: {
+      title: "Grid 4",
+      type: "section",
+      items: {
+        title: "text",
+        image: "image",
+        link: "text"
+      }
+    }
+
+  },
+
+  // Wires
+  wireframe: [
+    {
+      "section-splash": {
+        icon: "text"
+        width: "columns-12"
+      },
+      "section-grid1": {
+        width: "columns-6"
+      },
+      "section-grid2": {
+        width: "columns-6"
+      },
+      "section-grid3": {
+        width: "columns-6"
+      },
+      "section-grid4": {
+        width: "columns-6"
+      }
+    }
+  ]
+
+}

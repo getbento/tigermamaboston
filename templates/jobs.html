@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="jobs">
+
+  <!-- Splash Section Template -->
+  {% include '_splash.html' with context %}
+
+  <!-- Info -->
+  <section id="info" class="info wow fadeIn">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <h2 class="brandon light">{{ current.fields.info.title }}</h2>
+            <div>
+              {{ current.fields.info.description }}
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Job Listings -->
+
+  <!-- Alternating classes for backgrounds -->
+
+  <section id="jobs" class="jobs">
+    {% for job in boxes.jobs.all %}
+      <div class="job listing row {% if loop.index is divisibleby 2 %}row-1{% else %}row-2{% endif %} wow fadeIn">
+
+        <div class="static">
+          <div class="container">
+            <div class="col-sm-8 col-sm-offset-2 center">
+              <h2 class="brandon bold uppercase pink">{{ job.name }}</h2>
+              <p>{{ job.fields.subheading }}</p>
+              <button class="btn btn-primary btn-readmore hidden-sm hidden-md hidden-lg">Read More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hover">
+          <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+          <div class="container">
+            <div class="col-sm-8 col-sm-offset-2 center">
+              <h3 class="brandon bold uppercase black">{{ job.name }}</h3>
+              <p>{{job.fields.description}}</p>
+              <a href="{{job.fields.button}}"><button class="btn btn-dark">Apply Now</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </section>
+
+
+
+</div>
+{% endblock %}

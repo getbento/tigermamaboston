@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="q-cards">
+
+  <!-- Splash Section Template -->
+  {% include '_splash.html' with context %}
+
+  <!-- Info -->
+  <section id="info" class="info wow fadeIn">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <h2 class="brandon light">{{ current.fields.info.title }}</h2>
+          <div>
+            {{ current.fields.info.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Purchase Cards -->
+  <section class="purchase-cards wow fadeIn">
+    <img class="q-card" src="{{static('/images/q-card.png')}}" >
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <h1 class="brandon light pink">$25</h1>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="5Y8ZSSYM72VSC">
+            <input type="image" class="btn-paypal" src="{{static('/images/paypal-button.png')}}" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+
+        </div>
+        <div class="col-sm-3">
+        <h1 class="brandon light pink">$25</h1>
+
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="XERWYK9H5TJBQ">
+            <input type="image" class="btn-paypal" src="{{static('/images/paypal-button.png')}}" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+
+        </div>
+        <div class="col-sm-3">
+          <h1 class="brandon light pink">$75</h1>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="DR57T9MBENVQG">
+            <input type="image" class="btn-paypal" src="{{static('/images/paypal-button.png')}}" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+        </div>
+        <div class="col-sm-3 enter-amount">
+          <p>Enter Amount</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="item_name" value="Gift Card">
+            <input type="hidden" name="lc" value="US">
+            <input type="hidden" name="currency_code" value="USD" />
+            <input type="text" name="amount" value="" placeholder="$" />
+            <input type="image" class="btn-paypal" src="{{static('/images/paypal-button.png')}}" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+</div>
+{% endblock %}

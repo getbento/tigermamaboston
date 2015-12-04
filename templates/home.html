@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="home">
+
+<!-- Initial Splash Screen -->
+<section class="splash max-none" style="background-image:url('{{current.fields.splash.image}}')">
+  <div class="wrapper">
+    <div class="container">
+      <h1 class="big-hero">{{ current.fields.splash.title }}</h1>
+      <p>{{ current.fields.splash.subtitle }}</p>
+      {% if current.fields.splash.button1_text %}
+        <a href="{{ current.fields.splash.button1_target }}"><button class="btn btn-default alt">{{ current.fields.splash.button1_text }}</button></a>
+      {% endif %}
+      {% if current.fields.splash.button2_text %}
+        <a href="{{ current.fields.splash.button2_target }}"><button class="btn btn-default" href="{{ current.fields.splash.button2_target }}">{{ current.fields.splash.button2_text }}</button></a>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Squeeze Reservations in This Block -->
+  {% include '_reservations.html' with context %}
+
+</section>
+
+<!-- Grid 1-4 -->
+
+  <section class="grid brandon uppercase">
+    <div class="container-fluid">
+
+      <!-- Row 1 -->
+      <div class="row wow fadeIn">
+        <div class="col-sm-6" style="background-image:url('{{current.fields.grid1.image}}')">
+          <a href="{{current.fields.grid1.link}}" class="wrapper bold">
+            {{ current.fields.grid1.title }}
+          </a>
+        </div>
+        <div class="col-sm-6" style="background-image:url('{{current.fields.grid2.image}}')">
+          <a href="{{current.fields.grid2.link}}" class="wrapper bold">
+            {{ current.fields.grid2.title }}
+          </a>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="row wow fadeIn">
+        <div class="col-sm-6" style="background-image:url('{{current.fields.grid3.image}}')">
+          <a href="{{current.fields.grid3.link}}" class="wrapper bold">
+            {{ current.fields.grid3.title }}
+          </a>
+        </div>
+        <div class="col-sm-6" style="background-image:url('{{current.fields.grid4.image}}')">
+          <a href="{{current.fields.grid4.link}}" class="wrapper bold">
+            {{ current.fields.grid4.title }}
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+</div>
+
+
+{% endblock %}

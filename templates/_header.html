@@ -1,0 +1,81 @@
+
+<!-- Positioning Wrapper -->
+<div id="headers">
+
+  <!-- Superheader -->
+
+  <div class="superheader">
+
+    <!-- Desktop -->
+    <div class="container hidden-xs hidden-sm">
+      <!-- Social Icons -->
+      <div class="social pull-left">
+        {% for nav in navs.social %}
+          <a class="ss-{{nav.name|lower}} ss-icon ss-social-circle" target="_blank" href="{{ nav.url }}"></a>
+        {% endfor %}
+      </div>
+
+      <!--  Address and Number -->
+
+        {% set location=boxes.locations.all.0 %}
+        <div class="pull-right">
+          <span class="location uppercase droid-serif"><span class="glyphicon glyphicon-map-marker"></span><a target="_blank" href="https://www.google.com/maps/place/{{ location.street }} {{ location.city }} {{ location.state }}, {{ location.postal_code }}">{{ location.street }} {{ location.city }} {{ location.state }}, {{ location.postal_code }}</span></a>
+          <span class="phone uppercase droid-serif"><span class="glyphicon glyphicon-earphone"></span>{{ location.phone_number }} </span>
+          <button class="btn btn-primary" data-toggle="modal" data-target="#modal-reservations">Reservations</button>
+        </div>
+
+    </div>
+
+    <!-- Mobile Call, Address, Res Buttons -->
+    <div class="container hidden-md hidden-lg">
+      <div class="row ">
+        <div class="col-xs-6 call">
+          <a href="tel:{{ location.phone_number }}"><button class="btn btn-secondary">{{ location.phone_number }}</button></a>
+        </div>
+        <div class="col-xs-6 address">
+          <a target="_blank" href="https://www.google.com/maps/place/{{ location.street }} {{ location.city }} {{ location.state }}, {{ location.postal_code }}"><button class="btn btn-secondary">Map</button></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <button class="btn btn-primary reservations" data-toggle="modal" data-target="#modal-reservations">Reservations</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Header -->
+  <div id="main-nav" class="navbar navbar-default hidden-print">
+    <div class="container">
+
+      <!-- Logo & Mobile Toggle -->
+      <div class="navbar-header">
+        <div id="nav-icon3" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile-nav" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a class="logo" href="/"><img src="{{ account.logo }}" ></a>
+      </div>
+
+      <!-- Main Nav-->
+      <div class="collapse navbar-collapse"  id="mobile-nav">
+        <ul class="nav navbar-nav">
+          {% include '_nav.html' with context %}
+        </ul>
+
+        <!-- Social Icons that Display only on Dropdown Menu-->
+        <div class="social hidden-md hidden-lg">
+          {% for nav in navs.social %}
+            <a class="ss-{{nav.name|lower}} ss-icon ss-social-circle" target="_blank" href="{{ nav.url }}"></a>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- End Positioning Wrapper -->

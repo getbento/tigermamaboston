@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div id="restaurant">
+
+  <!-- Splash Section Template -->
+  {% include '_splash.html' with context %}
+
+
+  <!-- Info -->
+  <section id="info" class="info wow fadeIn">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <h2 class="brandon light">{{ current.fields.info.title }}</h2>
+          <div>
+            {{ current.fields.info.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Photo Grid -->
+
+  <section class="grid wow fadeIn">
+    <div class="container-fluid">
+
+    {% for gallery in boxes.galleries.all %}
+      {% if gallery.name == "Restaurant" %}
+        <div class="row">
+          {% for image in gallery.images %}
+
+            {% if loop.index is divisibleby 3 %}
+              <div class="col-sm-12 desaturate-desktop-only" style="background-image:url('{{image}}')">
+              </div>
+            {% else %}
+              <div class="col-sm-6 desaturate-desktop-only" style="background-image:url('{{image}}')">
+              </div>
+            {% endif %}
+
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+
+
+    </div>
+  </section>
+
+
+</div>
+{% endblock %}

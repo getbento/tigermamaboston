@@ -1,0 +1,16 @@
+{
+  theme: {
+    name: "Sweet Cheeks Q",
+    author: "Handsome Code"
+  },
+  navs: [
+    {
+      name: "Main Navigation",
+      slug: "main"
+    },
+    {
+      name: "Social Links",
+      slug: "social"
+    }
+  ]
+}

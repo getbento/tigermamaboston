@@ -1,0 +1,97 @@
+{
+  name: "Events",
+
+  // Sections and Editable Fields
+
+  fields: {
+    //Splash Section
+    splash: {
+      title: "Hero",
+      type: "section",
+      items: {
+        title: "text",
+        subtitle: "wysiwyg",
+        image: "image",
+        "button1_text": {
+          "title": "Button #1 Text",
+          "type": "text"
+        },
+        "button1_target": {
+          "title": "Button #1 Target",
+          "type": "text"
+        },
+        "button2_text": {
+          "title": "Button #2 Text",
+          "type": "text"
+        },
+        "button2_target": {
+          "title": "Button #2 Target",
+          "type": "text"
+        }
+      }
+    },
+    // About Section
+    info: {
+      title: "Information",
+      type: "section",
+      items: {
+        title: "text",
+        description: "wysiwyg"
+      }
+    },
+
+    // Form Occasion Dropdown
+    form: {
+      title: "Form Occasions Dropdown",
+      type: "section",
+      items: {
+        "occasions": {
+          type: "repeater",
+          items: {
+            title: "text"
+          }
+        }
+      }
+    }
+
+    // Partner Logos
+    logos: {
+      title: "Logos",
+      type: "section",
+      items: {
+        title: "text",
+        description: "wysiwyg",
+        "logomarks": {
+          type: "repeater",
+          items: {
+            image: "image"
+          }
+        }
+      }
+    }
+  },
+
+
+  // CMS Wires
+  wireframe: [
+    {
+      "section-splash": {
+        icon: "text",
+        width: "columns-12"
+      },
+      "section-info": {
+        icon: "text",
+        width: "columns-12"
+      },
+      "section-form": {
+        title: "Form",
+        width: "columns-12"
+      },
+      "section-logos": {
+        title: "Partner Logos",
+        width: "columns-12"
+      }
+    }
+  ]
+
+}

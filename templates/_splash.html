@@ -1,0 +1,19 @@
+<!-- Initial Splash Screen -->
+<section class="splash" style="background-image:url('{{current.fields.splash.image}}')">
+  <div class="wrapper">
+    <div class="container">
+      <h1 class="big-hero">{{ current.fields.splash.title }}</h1>
+      <p>{{ current.fields.splash.subtitle }}</p>
+      {% if current.fields.splash.button1_text %}
+        <a {% if current.fields.splash.button1_target|truncate(3) != "www" and current.fields.splash.button1_target|truncate(3) != "http" %}{% else %}target="_blank"{% endif %} href="{{ current.fields.splash.button1_target }}"><button class="btn btn-default alt">{{ current.fields.splash.button1_text }}</button></a>
+      {% endif %}
+      {% if current.fields.splash.button2_text %}
+        <a {% if current.fields.splash.button2_target|truncate(3) != "www" and current.fields.splash.button2_target|truncate(3) != "http" %} {% else %}target="_blank"{% endif %} href="{{ current.fields.splash.button2_target }}"><button class="btn btn-default" href="{{ current.fields.splash.button2_target }}">{{ current.fields.splash.button2_text }}</button></a>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Squeeze Reservations in This Block -->
+  {% include '_reservations.html' with context %}
+
+</section>

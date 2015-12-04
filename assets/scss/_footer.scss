@@ -1,0 +1,50 @@
+@import "variables";
+
+#footer section {
+  height: 320px;
+  font-size: 15px;
+  text-transform: uppercase;
+  position: relative;
+  @media (min-width: $screen-sm-min) {
+    height: 600px;
+    font-size: 20px;
+  }
+  text-align: center;
+  display: table;
+  width: 100%;
+}
+
+
+#footer .logo-mark img {height: 95px; width: 78px;}
+
+#footer .container {display: table-cell; vertical-align: middle;}
+
+#footer .btn {
+  width: 42%;
+  max-width: 160px;
+  margin: 0 10px;
+  @media (min-width: $screen-sm-min) {
+    width: 160px;
+  }
+}
+
+#footer .address {
+  background-color: $black; padding: 60px 0;
+  @media (min-width: $screen-sm-min) {
+     padding: 160px 0;
+  }
+}
+#footer .hours {background-color: $pink}
+
+
+// Address
+
+#footer section.address .address {padding: 40px; display: block;}
+
+
+// Hours
+
+#footer section.hours h1 {
+  font-size: 50px; font-weight: 800;
+}
+#footer section.hours p {padding: 5px; line-height: 30px;}

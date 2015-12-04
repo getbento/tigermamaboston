@@ -1,0 +1,345 @@
+@import "variables";
+
+
+//Splash Layout
+
+.splash {
+  display: table;
+  width: 100%;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+.wrapper {
+  vertical-align: middle;
+  display: table-cell !important;
+}
+
+.grid {
+  text-align: center;
+  font-size: 30px;
+  @media (min-width: $screen-sm-min) {
+    font-size: 50px;
+  }
+
+  .col-sm-6, .col-sm-12 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table;
+    padding: 0;
+    min-height: 300px;
+    @media (max-width: $screen-sm-max) {
+      width: 100%;
+    }
+    @media (min-width: $screen-sm-min) {
+      min-height: 500px;
+    }
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0,0,0,.3);
+    transition: background-color 1s ease;
+    -moz-transition: background-color 1s ease;
+    -webkit-transition: background-color 1s ease;
+    &:hover {background-color: rgba(120,0,60, .6);}
+    color: $white;
+  }
+}
+
+
+// Restaurant
+
+section.info {
+  padding: 50px 0;
+  h2 {
+    margin-top: 20px;
+  }
+  @media (min-width: $screen-sm-min) {
+    padding: 50px 20px;
+    p {
+      line-height: 35px;
+    }
+    h2 {
+      margin-top: 40px;
+    }
+
+  }
+
+}
+section.info h2 {margin-bottom: 30px}
+section.info p {margin-bottom: 30px}
+
+
+
+// Meet the Fam (Team)
+section.members .container {max-width: 980px;}
+section.members .container-fluid {padding: 0;}
+section.members h2 {
+  margin-top: 50px;
+  @media (min-width: $screen-sm-min) {
+    margin-top: 90px;
+  }
+}
+section.members .row-1, section.members .row-2 {padding: 80px 0; margin: 0;}
+section.members .row-2 {background-color: #111111;}
+
+section.members .right {
+  @media (min-width: $screen-sm-min) {
+    float: right !important;
+  }
+}
+
+section.members .left, section.members .right {
+  @media (max-width: $screen-sm-max) {
+    text-align: center !important;
+  }
+}
+
+section.members .member .circle2 {
+  background-image: url('{{ static("../images/photo-default.png")}}');
+  background-color: #000000;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%); -o-filter: grayscale(100%);
+  filter: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale');
+  filter: gray;
+  -webkit-filter: grayscale(1);
+}
+// Team Hover
+
+section.members .member {
+  transition: 1s;
+  overflow: hidden;
+  h2 {
+    color: $pink;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    &:hover {
+      background-color: $pink;
+      h2, p {color: $black;}
+      cursor: pointer;
+      .circle2 {
+        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+        -webkit-filter: grayscale(0);
+      }
+    }
+  }
+}
+
+.team-modal {
+  h2 {
+    margin-bottom: 5px;
+  }
+}
+
+
+// Jobs
+section.jobs .job h2 {margin-bottom: 20px; margin-top: 50px;}
+section.jobs .container {max-width: 980px;}
+section.jobs .container-fluid {padding: 0;}
+section.jobs .row-1, section.jobs .row-2 { margin: 0;}
+section.jobs .row-2 {background-color: #111111;}
+
+section.jobs .job {transition: 1s; overflow: hidden; }
+section.jobs .job .static {opacity: 1; transition: opacity .7s; padding: 80px 0;}
+section.jobs .job .hover {padding: 0; transition: opacity  .7s; max-height: 0; overflow: hidden; opacity: 0; color: $white; }
+
+
+// Desktop Hover States
+@media (min-width: $screen-sm-min) {
+  section.jobs .job:hover {background-color: $pink;}
+  section.jobs .job:hover .static {opacity: 0; max-height: 0; overflow: hidden; padding: 0;}
+  section.jobs .job:hover .hover {opacity: 1; max-height: 100%; padding: 80px 0; h2{ color: $white;}}
+}
+
+// Team + Jobs Mobile "Read More" State
+@media (max-width: $screen-sm-max) {
+  .read-more {
+    background-color: $pink !important;
+    padding: 0 !important;
+    .static {
+      max-height: 0 !important; opacity: 0 !important; padding: 0 !important;
+    }
+    .hover {
+      max-height: 100% !important; opacity: 1 !important; padding: 80px 0 !important;
+    }
+  }
+}
+
+.btn-dark {background-color: $black; color: $pink; margin-top: 30px; &:hover{color: $white;}}
+
+.hover {
+  position: relative;
+}
+
+.hover .close {
+  position: absolute !important;
+  top: 10px;
+  right: 10px;
+  float: none;
+  color: #000000;
+  @media (min-width: $screen-sm-min){
+    display: none;
+  }
+}
+
+// Menus
+
+
+.nav-tabs {
+  border-bottom: 0;
+  li {
+    display: inline;
+    float: none;
+  }
+  li a {
+    display: inline;
+    padding: 10px 0;
+  }
+  li a, li:hover a, li a:hover, li a:focus {
+    background: transparent !important;
+    border: none !important;
+  }
+  li.active a {
+    background: transparent;
+    border: none;
+    .btn-default {
+      background-color: transparent;
+      color: $white;
+      border: 1px solid $white;
+    }
+  }
+}
+
+.menu .container {
+  max-width: 940px;
+  .col-sm-12 {
+    padding: 0;
+  }
+}
+
+.menu .container-fluid {
+  padding: 0;
+}
+
+.menu h1 {
+  margin-top: 70px;
+  font-size: 36px;
+  @media (min-width: $screen-sm-min){
+    font-size: 50px;
+  }
+}
+.menu .row {margin: 0;}
+.menu .row-1, .menu .row-2 {padding: 40px 0 60px 0; margin: 0;}
+.menu .row-1:first-child {padding-top: 0;}
+.menu .row-2 {background-color: #111111;}
+
+.menu .listing h1 {font-size: 33px; font-family: "brandon-grotesque"; color: $pink; text-transform: uppercase; display: inline; }
+.menu .container p {font-size: 18px;}
+
+.menu .listing h2 {display: inline; font-size: 18px;}
+
+.menu table {width: 100%; td {width: 50%; padding-right: 5px;}}
+
+.menu .menu-column {margin-top: 30px; padding-left: 0 !important;}
+
+
+// Private Events
+
+.form .container {
+  max-width: 680px;
+}
+
+.form {background-color: #111111; padding: 40px 0;}
+.form input, .form textarea {
+  padding: 30px 15px;
+  background-color: #111111;
+  border-radius: 0 !important;
+}
+
+.form label {font-size: 18px; font-weight: 200;}
+h2 {
+  font-size: 33px; margin-bottom: 30px; margin-top: 80px;
+  @media (min-width: $screen-sm-min) {
+    font-size: 50px;
+  }
+}
+
+.partner-logo-wrapper {
+  height: 160px;
+  .partner-logo {
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.timepicker, .datepicker {color: #111111 !important;}
+
+
+
+// Press
+
+.press {padding: 25px 12px;}
+.press .col-md-3, .press .cols-sm-4 {padding-left:12px; padding-right: 12px;}
+.press .press-box {margin-bottom: 25px;}
+.press .press-box .container {background-color: #1f1f1f; position: relative; padding: 0;}
+.press .press-box .container {
+  height: 100%;
+  @media (min-width: $screen-sm-min) {
+    height: 450px;
+  }
+}
+.press .press-image {width: 100%; height: 215px; background-size: cover; border: none !important;}
+.press .press-box a h3 {color: $white; font-size: 30px; padding: 20px 20px 40px 20px; margin-top: 0;}
+.press .source {position: absolute; bottom: 20px; left: 20px;}
+
+
+// Q Cards
+
+#q-cards .purchase-cards {text-align: center;}
+#q-cards .purchase-cards {background-color: #1a1a1a; padding: 80px 0;}
+#q-cards .purchase-cards h1 {font-size: 50px; margin-top: 35px; }
+#q-cards .purchase-cards .container {max-width: 920px;}
+#q-cards .purchase-cards input {display: block; margin: 0 auto; padding: 15px; background-color: transparent; border: 1px solid #ffffff; margin-bottom:10px;}
+.q-card {margin-bottom: 60px;}
+#q-cards .enter-amount {
+  @media (max-width: $screen-sm-max) {
+    margin-top: 50px;
+  }
+}
+
+#q-cards img.q-card {
+  @media (max-width: $screen-sm-max) {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+// Find Us
+
+#map {
+  width: 100%;
+}
+.mapwrap {
+  width: 100%;
+  position: relative;
+  display: table;
+}
+
+#map, .mapwrap {
+  height: 400px;
+  @media (min-width: $screen-sm-min) {
+    height: 800px;
+  }
+}
+
+
