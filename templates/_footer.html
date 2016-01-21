@@ -5,10 +5,10 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
-          <a href="/" class="logo-mark"><img src="{{static('/images/logo-q.png')}}" ></a>
+          <a href="/" class="logo-mark"><img src="http://tigermama.preview.getbento.com/assets/tigermamaboston/images/logo.png" ></a>
 
           {% set location=boxes.locations.all.0 %}
-          <a class="address white" target="_blank" href="https://www.google.com/maps/place/{{ location.street }} {{ location.city }} {{ location.state }}, {{ location.postal_code }}">
+          <a class="address2" target="_blank" href="https://www.google.com/maps/place/{{ location.street }} {{ location.city }} {{ location.state }}, {{ location.postal_code }}">
             {{ location.street }}<br>{{ location.city }} {{ location.state }}, {{ location.postal_code }}
           </a>
         </div>

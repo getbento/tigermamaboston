@@ -9,7 +9,7 @@
     <!-- Desktop -->
     <div class="container hidden-xs hidden-sm">
       <!-- Social Icons -->
-      <div class="social pull-left">
+      <div class="social pull-right">
         {% for nav in navs.social %}
           <a class="ss-{{nav.name|lower}} ss-icon ss-social-circle" target="_blank" href="{{ nav.url }}"></a>
         {% endfor %}
@@ -18,10 +18,10 @@
       <!--  Address and Number -->
 
         {% set location=boxes.locations.all.0 %}
-        <div class="pull-right">
-          <span class="location uppercase droid-serif"><span class="glyphicon glyphicon-map-marker"></span><a target="_blank" href="https://www.google.com/maps/place/{{ location.street }} {{ location.city }} {{ location.state }}, {{ location.postal_code }}">{{ location.street }} {{ location.city }} {{ location.state }}, {{ location.postal_code }}</span></a>
-          <span class="phone uppercase droid-serif"><span class="glyphicon glyphicon-earphone"></span>{{ location.phone_number }} </span>
+        <div class="pull-left">
           <button class="btn btn-primary" data-toggle="modal" data-target="#modal-reservations">Reservations</button>
+          <span class="location uppercase droid-serif"><span class=""></span><a target="_blank" href="https://www.google.com/maps/place/{{ location.street }} {{ location.city }} {{ location.state }}, {{ location.postal_code }}">{{ location.street }} {{ location.city }} {{ location.state }}, {{ location.postal_code }}</span></a>
+          <span class="phone uppercase droid-serif"><span class=""></span>{{ location.phone_number }} </span>
         </div>
 
     </div>

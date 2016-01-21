@@ -1103,7 +1103,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #ed228c;
+  color: #1d1d1b;
   text-decoration: none;
 }
 a:hover,
@@ -2721,7 +2721,7 @@ select[multiple].input-lg {
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   border-radius: 4px;
   -webkit-user-select: none;
@@ -2832,8 +2832,8 @@ fieldset[disabled] .btn-default.active {
   background-color: #000000;
 }
 .btn-primary {
-  color: #000000;
-  background-color: #ed228c;
+  color: #ffffff;
+  background-color: #1d1d1b;
   border-color: transparent;
 }
 .btn-primary:focus,
@@ -2851,7 +2851,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #000000;
-  background-color: #cb1172;
+  background-color: #1d1d1b;
   border-color: rgba(0, 0, 0, 0);
 }
 .btn-primary:active:hover,
@@ -2864,7 +2864,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active.focus,
 .open > .dropdown-toggle.btn-primary.focus {
   color: #000000;
-  background-color: #aa0e60;
+  background-color: #1d1d1b;
   border-color: rgba(0, 0, 0, 0);
 }
 .btn-primary:active,
@@ -4050,16 +4050,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-toggle {
-  position: relative;
-  float: right;
-  margin-right: 15px;
-  padding: 9px 10px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  background-color: transparent;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
+    position: relative;
+    float: right;
+    margin-right: 15px;
+    padding: 12px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: #1d1d1b;
 }
 .navbar-toggle:focus {
   outline: 0;

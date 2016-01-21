@@ -1,10 +1,10 @@
-@import "variables";
+ @import "variables";
 
 // Superheader
 
-.superheader { display: block; background-color: rgba(0,0,0,1); min-height: 60px; padding-top: 12px; font-size: 12px;}
-.superheader .glyphicon {color: $pink; border: 1px solid $pink; border-radius: 100px; padding: 7px; margin-right: 5px;}
-.superheader .phone, .superheader .location {color: $grey; letter-spacing: 1px; margin-right: 10px; margin-left: 5px; a {color: $grey;}}
+.superheader { display: block;     background-image: url("http://tigermama.preview.getbento.com/assets/tigermamaboston/images/preheader-bg.jpg"); min-height: 60px; padding-top: 12px; font-size: 12px;}
+
+.superheader .phone, .superheader .location {color: #fff; letter-spacing: 1px; margin-right: 10px; margin-left: 5px; a {color: #fff;}}
 .superheader .hidden-lg .btn {width: 100%;}
 
 .social {font-size: 28px;}
@@ -12,7 +12,7 @@
 
 .col-xs-6.call {padding-right: 5px;}
 .col-xs-6.address {padding-left: 5px;}
-.btn.reservations {margin-top: 8px; margin-bottom: 8px}
+.btn.reservations {margin-top: 8px; margin-bottom: 8px; background-color: #e94e09;}
 
 
 // Header
@@ -33,8 +33,13 @@
   .Jobs {display: none;}
 }
 
+.navbar-default .navbar-nav > li > a {
+    color: #1d1d1b !important;
+}
+
+
 .navbar-nav > li {
-  padding: 0 30px;
+  padding: 0 25px;
   &:last-child {
     @media (min-width: 1400px) {
       padding-right: 0;
@@ -45,34 +50,44 @@
 .navbar-nav > li.selected a {
   @media (min-width: 1400px) {
     padding-right: 0;
+    color: #e94e09 !important;
     border-color: $white;
   }
 }
+
 .navbar-nav > li > a {
   letter-spacing: 1px;
   border-bottom: 2px solid transparent;
   transition: 1s; -webkit-transition: 1s; -moz-transition: 1s;
   padding-bottom: 15px;
-  &:hover {border-color: $white; }
+  &:hover {border-color: #e94e09; }
   @media (min-width: 1400px) {
-    padding: 50px 0 5px 0 !important;
+    padding: 51px 0 5px 0 !important;
   }
+}
+
+.navbar-nav > li > a:hover {
+  color:#1d1d1b !important;
 }
 
 .logo img {
   margin-top: 20px;
+  margin-bottom: 20px;
   @media (max-width: 1399px) {
-    width: 128px;
-    height: 68px;
+  width: 175px;
+  height: 69px;
     margin-left: 25px;
   }
-  width: 176px;
-  height: 95px;
+      width: 200px;
+    height: 79px;
 }
 
 
 
-#main-nav, #mobile-nav, .navbar-header {border: none; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;}
+#main-nav, #mobile-nav, .navbar-header {border: none; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;background-color:#fff;}
+
+#main-nav, #mobile-nav, .navbar-header a {color:#fff;}
+
 
 #main-nav.active .container {height: 100%}
 #main-nav.active #mobile-nav {height: 100%}
@@ -82,6 +97,9 @@
   text-align: center;
 }
 
+#mobile-nav.in, #mobile-nav.collapsing  a{
+color:#fff;
+}
 .navbar-header.background {background-color: rgba(0,0,0,1);}
 
 #mobile-nav .social {padding-bottom: 25px;}

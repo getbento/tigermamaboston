@@ -22,7 +22,7 @@
                <div class="circle2" {% if member.fields.picture %} style="background-image:url('{{ member.fields.picture }}')" {% endif %}></div>
               </div>
               <div class="col-sm-7 center">
-                <h2 class="brandon bold uppercase">{{ member.name }}</h2>
+                <h2 class="brandon">{{ member.name }}</h2>
                 <p>{{ member.fields.title }}</p>
                 <button class="btn btn-primary hidden-sm hidden-md hidden-lg" href="#{{member.name|slugify}}">Read More</button>
               </div>
@@ -50,8 +50,8 @@
 
     <div class="container">
       <div class="col-sm-8 col-sm-offset-2">
-        <h2 class="brandon bold uppercase white">{{ member.name }}</h2>
-        <span class="white">{{member.fields.title}}</span></br>
+        <h2 class="brandon white">{{ member.name }}</h2>
+        <span class="orange">{{member.fields.title}}</span></br>
         <br>
         <p class="white">{{member.fields.bio}}</p>
       </div>

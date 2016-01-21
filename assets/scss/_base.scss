@@ -3,12 +3,22 @@
 // General
 
 body {
-  background-color: #000000;
-  font-family: "droid-serif", serif;
+  background-image: url("http://tigermama.preview.getbento.com/assets/tigermamaboston/images/gray-bg.jpg");
+  font-family: "gotham", serif;
   transition: 1s ease;
   -moz-transition: 1s ease;
   -webkit-transition: 1s ease;
   letter-spacing: 1px;
+}
+
+@font-face {
+    font-family: gotham;
+    src: url("http://tigermama.preview.getbento.com/assets/tigermamaboston/fonts/gotham-medium.otf");
+}
+
+@font-face {
+    font-family: signalist;
+    src: url("http://tigermama.preview.getbento.com/assets/tigermamaboston/fonts/signalist.otf");
 }
 
 
@@ -33,9 +43,16 @@ body {
 
 #powered-by {
   p {
+    font-family:gotham;
     font-size: 12px;
     padding: 20px 0 10px 0;
     text-align: center;
+    text-transform: uppercase;
+
+  }
+    p:hover {
+    color:#e94e09 !important;
+
   }
 }
 
@@ -44,15 +61,19 @@ body {
 // Typography
 
 .brandon {
-  font-family: "brandon-grotesque", sans-serif;
+  font-family: gotham;
 }
 
 .droid-serif {
-  font-family: "droid-serif", serif;
+  font-family: gotham;
 }
 
 .droid-sans {
-  font-family: "droid-sans", sans-serif;
+  font-family: gotham;
+}
+
+.signalist {
+  font-family: signalist;
 }
 
 .uppercase {
@@ -75,7 +96,11 @@ body {
   color: $white;
 }
 .pink {
-  color: $pink;
+  color: $black;
+}
+
+.orange{
+  color: #e94e09;
 }
 
 .light {
@@ -92,13 +117,14 @@ a {
 }
 
 p {
-  font-size: 15px;
+  font-size: 16px;
+  color: #1d1d1b;
   @media (min-width: $screen-sm-min){
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
-h1 {font-family: "brandon-grotesque", sans-serif;}
+h1 {font-family: "signalist", sans-serif;}
 h1.big-hero {
   @media (max-width: 500px) {
     font-size: 40px;
@@ -114,6 +140,7 @@ h1.big-hero {
 
 h2 {
   font-size: 30px;
+  font-family: "signalist", sans-serif;
   @media (min-width: $screen-sm-min) {
     font-size: 50px;
   }
@@ -159,6 +186,7 @@ h2 {
     width: 300px;
     height: 300px;
   }
+  border: 5px solid #1d1d1b;
   background-size: cover;
   border-radius: 300px;
   -moz-border-radius: 300px;
@@ -168,9 +196,10 @@ h2 {
 .circle2 {
   width: 200px;
   height: 200px;
+  border: 5px solid #1d1d1b;
   @media (min-width: $screen-sm-min) {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
   }
   background-size: cover;
   border-radius: 300px;
@@ -182,20 +211,21 @@ h2 {
 // Buttons
 
 .btn {background-image: none !important; border: none; box-shadow: none; transition: .8s; text-shadow: none !important; -webkit-text-shadow: none !important; -moz-text-shadow: none !important;}
-.btn {font-family: "brandon-grotesque"; font-weight: 600; padding-left: 30px; padding-right: 30px; text-transform: uppercase; border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px;}
-.btn-secondary {background-color: $black; border: 1px solid $pink; color: $pink;}
-.btn-secondary:hover {background-color: $pink; color: $black; border: none;}
+.btn {font-family: "gotham"; font-weight: 400; padding-left: 30px; padding-right: 30px; padding-top: 10px;
+    padding-bottom: 10px; text-transform: uppercase; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px;letter-spacing:1px;}
+.btn-secondary {background-color: $black; border: 1px solid #1d1d1b; color: #fff;}
+.btn-secondary:hover {background-color: #1d1d1b; color: #1d1d1b; border: none;}
 
 .btn-default {border: 1px solid transparent;}
 .btn-default:hover {background-color: transparent; border: 1px solid #ffffff; color: $white;}
-.btn-primary:hover {background-color: #d31c7c;}
+.btn-primary:hover {background-color: #e94e09;}
 
 
 .btn-default.alt {background: transparent; border: 1px solid #ffffff; color: #ffffff;
   &:hover {background: $white; color: $black;}
 }
 
-.btn-submit {width: 100%; padding: 20px; font-size: 18px;}
+.btn-submit {width: 100%; padding: 20px; font-size: 16px;}
 
 .btn-paypal {width: 135px; height: 34px; border: none !important; padding: 0 !important;}
 
