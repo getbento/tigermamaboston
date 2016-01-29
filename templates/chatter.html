@@ -16,10 +16,10 @@
           <a href="{{ article.external_url }}" target="_blank">
             <div class="container">
               {% if article.image %}
-                <div class="press-image desaturate" style="background-image:url('{{ article.image }}')">
+                <div class="press-image" style="background-image:url('{{ article.image }}')">
                 </div>
               {% endif %}
-              <h3 class="brandon light">{{ article.name }}</h3>
+              <h3 class="light">{{ article.name }}</h3>
               <a href="{{ article.external_url }}" class="source" target="_blank">{{ article.source }}</a>
             </div>
           </a>

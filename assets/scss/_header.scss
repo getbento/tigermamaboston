@@ -7,8 +7,8 @@
 .superheader .phone, .superheader .location {color: #fff; letter-spacing: 1px; margin-right: 10px; margin-left: 5px; a {color: #fff;}}
 .superheader .hidden-lg .btn {width: 100%;}
 
-.social {font-size: 28px;}
-.social .ss-icon {margin-right: 12px;}
+.social {font-size: 28px; color:#e94e09;}
+.social .ss-icon {margin-right: 12px; color:#e94e09;}
 
 .col-xs-6.call {padding-right: 5px;}
 .col-xs-6.address {padding-left: 5px;}
@@ -86,7 +86,7 @@
 
 #main-nav, #mobile-nav, .navbar-header {border: none; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;background-color:#fff;}
 
-#main-nav, #mobile-nav, .navbar-header a {color:#fff;}
+#main-nav, #mobile-nav, .navbar-header a {color:#fff !important;}
 
 
 #main-nav.active .container {height: 100%}

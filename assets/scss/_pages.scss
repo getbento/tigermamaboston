@@ -121,7 +121,7 @@ section.members .member {
     font-size:100px;
     margin-bottom:0px !important;
   }
-       p {color: #fff;}
+       p {color: #e94e09;}
 
   @media (min-width: $screen-sm-min) {
     &:hover {
@@ -243,7 +243,7 @@ section.jobs .job .hover {padding: 0; transition: opacity  .7s; max-height: 0; o
   }
 }
 .menu .row {margin: 0;}
-.menu .row-1, .menu .row-2 {padding: 40px 0 60px 0; margin: 0;}
+.menu .row-1, .menu .row-2 {padding: 0px 0 60px 0; margin: 0;}
 .menu .row-1:first-child {padding-top: 0;}
 .menu .row-2 {background-color: #111111;}
 

@@ -116,6 +116,26 @@ a {
   -webkit-transition: 1s ease;
 }
 
+h4 {
+  font-family: "signalist", sans-serif;
+  font-size: 45px;
+  color: #1d1d1b;
+  @media (min-width: $screen-sm-min){
+    font-size: 50px;
+    margin-bottom: 0px;
+    margin-top: 40px;
+  }
+}
+
+p {
+  font-size: 16px;
+  color: #1d1d1b;
+  @media (min-width: $screen-sm-min){
+    font-size: 16px;
+  }
+}
+
+
 p {
   font-size: 16px;
   color: #1d1d1b;
@@ -138,6 +158,8 @@ h1.big-hero {
   }
 }
 
+.menutitle {font-family: "signalist", sans-serif;  color: #1d1d1b; font-size: 80px;}
+
 h2 {
   font-size: 30px;
   font-family: "signalist", sans-serif;
@@ -147,6 +169,23 @@ h2 {
 }
 
 
+h5 {
+  font-size: 16px;
+  color: #1d1d1b;
+  @media (min-width: $screen-sm-min){
+  font-size: 16px;
+  text-transform:uppercase;
+    font-family: "gotham"; 
+  }
+}
+
+
+
+hr {
+
+  border: 3px solid #1d1d1b;
+
+}
 
 
 // Layout
