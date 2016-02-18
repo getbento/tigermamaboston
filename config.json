@@ -1,7 +1,8 @@
 {
   theme: {
     name: "Sweet Cheeks Q",
-    author: "Handsome Code"
+    author: "Handsome Code",
+    "fields": {"private_events_form_email": "text"}
   },
   navs: [
     {

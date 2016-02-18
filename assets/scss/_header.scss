@@ -2,7 +2,7 @@
 
 // Superheader
 
-.superheader { display: block;     background-image: url("http://tigermama.preview.getbento.com/assets/tigermamaboston/images/preheader-bg.jpg"); min-height: 60px; padding-top: 12px; font-size: 12px;}
+.superheader { display: block;     background-image: url("{{ static('images/preheader-bg.jpg') }}"); min-height: 60px; padding-top: 12px; font-size: 12px;}
 
 .superheader .phone, .superheader .location {color: #fff; letter-spacing: 1px; margin-right: 10px; margin-left: 5px; a {color: #fff;}}
 .superheader .hidden-lg .btn {width: 100%;}

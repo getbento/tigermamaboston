@@ -5,7 +5,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
-          <a href="/" class="logo-mark"><img src="http://tigermama.preview.getbento.com/assets/tigermamaboston/images/logo.png" ></a>
+          <a href="/" class="logo-mark"><img src="{{ account.logo }}" ></a>
 
           {% set location=boxes.locations.all.0 %}
           <a class="address2" target="_blank" href="https://www.google.com/maps/place/{{ location.street }} {{ location.city }} {{ location.state }}, {{ location.postal_code }}">

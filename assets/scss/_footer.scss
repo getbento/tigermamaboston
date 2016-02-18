@@ -46,7 +46,7 @@
 
 #footer .address {
 
-          background-image: url("http://tigermama.preview.getbento.com/assets/tigermamaboston/images/address-bg.jpg");
+          background-image: url("{{ static('images/address-bg.jpg') }}");
 
   @media (min-width: $screen-sm-min) {
      padding: 160px 0;
@@ -65,7 +65,7 @@
 }
 
 #footer .hours  {
-    background-image: url("http://tigermama.preview.getbento.com/assets/tigermamaboston/images/hours-bg.jpg");
+    background-image: url("{{ static('images/hours-bg.jpg') }}");
 }
 
 

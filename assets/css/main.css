@@ -361,7 +361,7 @@ h2 {
 
 .superheader {
   display: block;
-  background-image: url("http://tigermama.preview.getbento.com/assets/tigermamaboston/images/preheader-bg.jpg");
+  background-image: url("{{ static('images/preheader-bg.jpg') }}");
   min-height: 60px;
   padding-top: 12px;
   font-size: 12px; }
@@ -520,7 +520,7 @@ h2 {
       width: 160px; } }
 
 #footer .address {
-  background-image: url("http://tigermama.preview.getbento.com/assets/tigermamaboston/images/address-bg.jpg"); }
+  background-image: url("{{ static('images/address-bg.jpg') }}"); }
   @media (min-width: 768px) {
     #footer .address {
       padding: 160px 0; } }
@@ -534,7 +534,7 @@ h2 {
   color: #e94e09 !important; }
 
 #footer .hours {
-  background-image: url("http://tigermama.preview.getbento.com/assets/tigermamaboston/images/hours-bg.jpg"); }
+  background-image: url("{{ static('images/hours-bg.jpg') }}"); }
 
 #footer section.address .address {
   padding: 40px;

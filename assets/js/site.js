@@ -92,8 +92,10 @@ $(document).ready(function(){
   })
 
   $(function () {
-   var activeTab = $('[href=' + location.hash + ']');
-   activeTab && activeTab.tab('show');
+    if (location.hash){
+       var activeTab = $('[href=' + location.hash + ']');
+       activeTab && activeTab.tab('show');
+    }
   });
 
 
@@ -144,51 +146,51 @@ $(document).ready(function(){
 
 
   // Form Validation Post Forms
-  $(document).on("click", 'button.submit-post', function(event)  {
-    event.preventDefault();
-    var $form = $(this).parents('form');
-    var error;
+  // $(document).on("click", 'button.submit-post', function(event)  {
+  //   event.preventDefault();
+  //   var $form = $(this).parents('form');
+  //   var error;
 
-    function resetErrors() {
-      error = false;
-      $('.error-msg, .success-msg').hide();
-      $form.find('input').parent().removeClass('error');
-    }
+  //   function resetErrors() {
+  //     error = false;
+  //     $('.error-msg, .success-msg').hide();
+  //     $form.find('input').parent().removeClass('error');
+  //   }
 
-    //Validations
-    resetErrors();
+  //   //Validations
+  //   resetErrors();
 
-    var required = ['email', 'firstName', 'lastName'];
+  //   var required = ['email', 'firstName', 'lastName'];
 
-    _.each(required, function (requiredId) {
-      var $input = $form.find('#'+requiredId);
-      if ($input.length > 0 && $input.val() === '') {
-        $input.parent().addClass('error');
-        error = true;
-      }
-    });
+  //   _.each(required, function (requiredId) {
+  //     var $input = $form.find('#'+requiredId);
+  //     if ($input.length > 0 && $input.val() === '') {
+  //       $input.parent().addClass('error');
+  //       error = true;
+  //     }
+  //   });
 
-    if (error) {
-      $form.find('.error-msg').show();
-      return false;
-    } else {
-      var datastring = $form.serialize();
+  //   if (error) {
+  //     $form.find('.error-msg').show();
+  //     return false;
+  //   } else {
+  //     var datastring = $form.serialize();
 
-      $.ajax({
-          type: 'POST',
-          url: $(this).parents('form').attr('action'),
-          data: datastring,
-          success: function(data, textStatus) {
-            resetErrors();
-            $(event.target).hide();
-            $form.find('.success-msg').show();
-          },
-          error: function(xhr, status, error){
-            console.log(xhr, status, error);
-          }
-      });
-    }
-  });
+  //     $.ajax({
+  //         type: 'POST',
+  //         url: $(this).parents('form').attr('action'),
+  //         data: datastring,
+  //         success: function(data, textStatus) {
+  //           resetErrors();
+  //           $(event.target).hide();
+  //           $form.find('.success-msg').show();
+  //         },
+  //         error: function(xhr, status, error){
+  //           console.log(xhr, status, error);
+  //         }
+  //     });
+  //   }
+  // });
 
   // Form Validation Get Forms
   $(document).on("click", 'button.submit-get', function(event)  {

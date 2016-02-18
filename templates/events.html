@@ -51,7 +51,7 @@
       {% import 'forms.html' as forms with context %}
       {% call forms.email_form("events") %}
 
-        <h2 class="brandon bold uppercase pink">Your contact info</h2>
+        <h2 class="brandon bold uppercase orange">Your contact info</h2>
         <div class="row">
           <div class="form-group col-sm-6">
             <label for="firstName">First Name</label>
@@ -82,7 +82,7 @@
         </div>
 
 
-        <h2 class="brandon bold uppercase pink">Your event details</h2>
+        <h2 class="brandon bold uppercase orange">Your event details</h2>
 
         <div class="form-group row">
           <div class="col-sm-12">
@@ -139,7 +139,8 @@
             <br><br>
             <p class="error-msg">Please complete all required fields</p>
             <p class="success-msg">Success! Thank you for your submission. Someone will be in touch with you shortly.</p>
-            <button type="submit" class="btn btn-primary btn-submit submit-post">submit</button>
+            <input type="hidden" name=recipient value="{{ theme.options.private_events_form_email }}">
+            <button type="submit" class="btn btn-primary btn-orange btn-submit submit-post">submit</button>
           </div>
         </div>
 
@@ -175,4 +176,12 @@
 
 
 </div>
+{% endblock %}
+
+{% block initscripts %}
+<script type="text/javascript">
+$(document).ready(function() {
+  Bento.Forms.initialize();
+});
+</script>
 {% endblock %}
