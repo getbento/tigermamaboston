@@ -1,5 +1,5 @@
 body {
-  background-image: url("http://tigermama.preview.getbento.com/assets/tigermamaboston/images/gray-bg.jpg");
+  background-image: url("{{ static('images/gray-bg.jpg') }}");
   font-family: "gotham", serif;
   transition: 1s ease;
   -moz-transition: 1s ease;
@@ -8,10 +8,10 @@ body {
 
 @font-face {
   font-family: gotham;
-  src: url("http://tigermama.preview.getbento.com/assets/tigermamaboston/fonts/gotham-medium.otf"); }
+  src: url("{{ static('fonts/gotham-medium.otf') }}"); }
 @font-face {
   font-family: signalist;
-  src: url("http://tigermama.preview.getbento.com/assets/tigermamaboston/fonts/signalist.otf"); }
+  src: url("{{ static('fonts/signalist.otf') }}"); }
 /* Typekit Flash of Unstyled Text Hack */
 .wf-loading {
   opacity: 0; }

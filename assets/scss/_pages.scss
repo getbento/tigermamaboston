@@ -273,6 +273,19 @@ section.jobs .job .hover {padding: 0; transition: opacity  .7s; max-height: 0; o
 
 .form .container {
   max-width: 680px;
+  div.success, div.error, div.validation-error{
+    display:none;
+  }
+  input.error{
+    border-color:#e94e09;
+  }
+  h2 {
+    font-family: signalist;
+    font-size:80px;
+    @media (max-width: 767px){
+      font-size:63px;
+    }
+  }
 }
 
 .form {background-color: #111111; padding: 40px 0;}
@@ -300,7 +313,6 @@ h2 {
   }
 }
 .timepicker, .datepicker {color: #111111 !important;}
-
 
 
 // Press

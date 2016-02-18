@@ -47,6 +47,9 @@
 
   <section class="form wow fadeIn" id="events-form">
     <div class="container">
+    <div class="success">
+    Success! Thank you for your submission. Someone will be in touch with you shortly.
+    </div>
 
       {% import 'forms.html' as forms with context %}
       {% call forms.email_form("events") %}
@@ -55,17 +58,17 @@
         <div class="row">
           <div class="form-group col-sm-6">
             <label for="firstName">First Name</label>
-            <input type="text" class="form-control" id="firstName" name="First Name">
+            <input type="text" class="form-control" id="firstName" name="First Name" required>
           </div>
           <div class="form-group col-sm-6">
             <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName" name="Last Name">
+            <input type="text" class="form-control" id="lastName" name="Last Name" required>
           </div>
         </div>
         <div class="form-group row">
           <div class="col-sm-12">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="Email">
+            <input type="email" class="form-control" id="email" name="Email" required>
           </div>
         </div>
         <div class="form-group row">
@@ -137,8 +140,9 @@
         <div class="form-group row">
           <div class="col-sm-12">
             <br><br>
-            <p class="error-msg">Please complete all required fields</p>
-            <p class="success-msg">Success! Thank you for your submission. Someone will be in touch with you shortly.</p>
+            <div class="validation-error">Please complete all required fields</div>
+            <div class="error">There was an error submitting the form.  Please try again.</div>
+<!--             <p class="success-msg">Success! Thank you for your submission. Someone will be in touch with you shortly.</p> -->
             <input type="hidden" name=recipient value="{{ theme.options.private_events_form_email }}">
             <button type="submit" class="btn btn-primary btn-orange btn-submit submit-post">submit</button>
           </div>
@@ -181,7 +185,13 @@
 {% block initscripts %}
 <script type="text/javascript">
 $(document).ready(function() {
-  Bento.Forms.initialize();
+  Bento.Forms.initialize({
+    formSelector: '#events-form form',
+    successCallback: function(){
+      $('#events-form form').fadeOut();
+      $("html, body").animate({ scrollTop: $('#events-form').offset().top }, 500);
+    }
+  });
 });
 </script>
 {% endblock %}

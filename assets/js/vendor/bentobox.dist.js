@@ -180,7 +180,7 @@
 
 	var Utils = (function() {
 		var utils = {};
-		
+
 		utils.isMobile = function() {
 			return (window.matchMedia("(max-width: 800px)").matches);
 		}
@@ -269,6 +269,7 @@
 	        _.each(inputs, function(input) {
 	            if (!input.checkValidity()) {
 	                $(input).addClass('error');
+	                $('div.validation-error').fadeIn();
 	                hasErrors = true;
 	            }
 	        }, this);
