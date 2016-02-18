@@ -124,7 +124,14 @@
 #mobile-nav.in, #mobile-nav.collapsing  a{
 color:#fff;
 }
-.navbar-header.background {background-color: rgba(0,0,0,1);}
+.navbar-header.background {
+  background-color: rgba(0,0,0,1);
+  background-image:none;
+}
+
+.navbar-header{
+  background-image: url("{{ static('images/address-bg.jpg') }}");
+}
 
 #mobile-nav .social {padding-bottom: 25px;}
 
@@ -133,5 +140,13 @@ color:#fff;
     margin-right:0;
     margin-left:24px;
   }
+}
+
+.navbar-default .navbar-toggle:hover{
+  background-color: rgba(0,0,0,1);
+}
+
+.navbar-toggle.open{
+    background-color: rgba(0,0,0,1);
 }
 
