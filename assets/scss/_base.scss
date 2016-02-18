@@ -54,6 +54,9 @@ body {
     color:#e94e09 !important;
 
   }
+  a:hover{
+    color:#e94e09;
+  }
 }
 
 
@@ -175,7 +178,7 @@ h5 {
   @media (min-width: $screen-sm-min){
   font-size: 16px;
   text-transform:uppercase;
-    font-family: "gotham"; 
+    font-family: "gotham";
   }
 }
 
@@ -416,4 +419,8 @@ hr {
       color: #999999;
     }
   }
+}
+
+.social .ss-icon:hover{
+  color:#fff;
 }

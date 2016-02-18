@@ -1,6 +1,11 @@
 
 $(document).ready(function(){
 
+  $('#purchase-anchor').on('click', function(e){
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: $('section.purchase-cards').offset().top }, 500);
+  })
+
 
   // Mobile Reservations Form Display Mobile Height Fix
   $('.btn-primary.reservations').click(function() {

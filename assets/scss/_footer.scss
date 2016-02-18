@@ -23,7 +23,16 @@
   }
 }
 
-#footer .container {display: table-cell; vertical-align: middle;}
+#footer .container {
+  display: table-cell;
+  vertical-align: middle;
+  .hours {
+    em{
+      font-style:normal;
+      color:#e94e09;
+    }
+  }
+}
 
 #footer .btn {
   width: 42%;
@@ -55,7 +64,7 @@
   color:#e94e09 !important;
 }
 
-#footer .hours  { 
+#footer .hours  {
     background-image: url("http://tigermama.preview.getbento.com/assets/tigermamaboston/images/hours-bg.jpg");
 }
 

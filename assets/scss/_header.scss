@@ -13,11 +13,24 @@
 .col-xs-6.call {padding-right: 5px;}
 .col-xs-6.address {padding-left: 5px;}
 .btn.reservations {margin-top: 8px; margin-bottom: 8px; background-color: #e94e09;}
+.btn-orange{
+  background-color:#e94e09;
+  &:hover{
+    background-color:$white;
+    color:#000;
+  }
+}
 
 
 // Header
 
-#headers {position: absolute; z-index: 10; width: 100%; display: block;}
+#headers {
+  // position: absolute;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  display: block;
+}
 .navbar-default {
   box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;
   margin-bottom: 0;
@@ -25,6 +38,9 @@
 .nav {
   font-weight: 600;
   font-size: 16px;
+  @media (min-width: 1400px) {
+    float:right;
+  }
   .Home {
     @media (min-width: 768px) {
       display: none;
@@ -34,7 +50,12 @@
 }
 
 .navbar-default .navbar-nav > li > a {
+  @media (min-width: 1400px) {
     color: #1d1d1b !important;
+  }
+  &:hover{
+
+  }
 }
 
 
@@ -67,7 +88,7 @@
 }
 
 .navbar-nav > li > a:hover {
-  color:#1d1d1b !important;
+  // color:#1d1d1b !important;
 }
 
 .logo img {
@@ -103,4 +124,11 @@ color:#fff;
 .navbar-header.background {background-color: rgba(0,0,0,1);}
 
 #mobile-nav .social {padding-bottom: 25px;}
+
+.modified-margins{
+  @media (min-width:768px){
+    margin-right:0;
+    margin-left:24px;
+  }
+}
 
