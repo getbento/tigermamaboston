@@ -65,7 +65,8 @@
 }
 
 #footer .hours  {
-    background-image: url("{{ static('images/hours-bg.jpg') }}");
+    background: url("{{ static('images/hours-bg.jpg') }}") no-repeat center center fixed;
+    background-size:cover;
 }
 
 
