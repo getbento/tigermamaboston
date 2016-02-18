@@ -2,7 +2,7 @@
 <section class="splash" style="background-image:url('{{current.fields.splash.image}}')">
   <div class="wrapper">
     <div class="container">
-      <h1 class="big-hero">{{ current.fields.splash.title }}</h1>
+      <div class="big-hero">{{ current.fields.splash.title }}</div>
       <p>{{ current.fields.splash.subtitle }}</p>
       {% if current.fields.splash.button1_text %}
         <a {% if current.fields.splash.button1_target|truncate(3) != "www" and current.fields.splash.button1_target|truncate(3) != "http" %}{% else %}target="_blank"{% endif %} href="{{ current.fields.splash.button1_target }}"><button class="btn btn-default alt">{{ current.fields.splash.button1_text }}</button></a>

@@ -9,7 +9,7 @@
       title: "Hero",
       type: "section",
       items: {
-        title: "text",
+        title: "wysiwyg",
         subtitle: "wysiwyg",
         image: "image",
         "button1_text": {
