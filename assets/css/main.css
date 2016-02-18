@@ -264,7 +264,7 @@ h2 {
       -webkit-filter: grayscale(0); } }
 
 .bootstrap-datetimepicker-widget td.active, .bootstrap-datetimepicker-widget td.active:hover {
-  background-color: #ed228c; }
+  background-color: #e94e09; }
 
 .close {
   color: #ffffff;
@@ -634,7 +634,7 @@ h2 {
   left: 50%; }
 
 .datepicker-days table td.active.day {
-  background: #ed228c !important; }
+  background: #e94e09 !important; }
 
 .heroimage {
   width: 100%;
@@ -798,7 +798,7 @@ section.jobs .job .hover {
 
 @media (min-width: 768px) {
   section.jobs .job:hover {
-    background-color: #ed228c; }
+    background-color: #e94e09; }
 
   section.jobs .job:hover .static {
     opacity: 0;
@@ -814,7 +814,7 @@ section.jobs .job .hover {
       color: #ffffff; } }
 @media (max-width: 767px) {
   .read-more {
-    background-color: #ed228c !important;
+    background-color: #e94e09 !important;
     padding: 0 !important; }
     .read-more .static {
       max-height: 0 !important;
@@ -826,7 +826,7 @@ section.jobs .job .hover {
       padding: 80px 0 !important; } }
 .btn-dark {
   background-color: #000000;
-  color: #ed228c;
+  color: #e94e09;
   margin-top: 30px; }
   .btn-dark:hover {
     color: #ffffff; }
@@ -894,7 +894,7 @@ section.jobs .job .hover {
 .menu .listing h1 {
   font-size: 33px;
   font-family: "brandon-grotesque";
-  color: #ed228c;
+  color: #e94e09;
   text-transform: uppercase;
   display: inline; }
 
