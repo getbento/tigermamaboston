@@ -101,6 +101,9 @@
 }
 
 #main-nav{
+  @media(min-width: 1400px){
+      background-image: url("{{ static('images/address-bg.jpg') }}");
+  }
   .nav{
     @media (min-width: 1400px) {
       float:right;
@@ -109,6 +112,12 @@
 }
 
 #main-nav, #mobile-nav, .navbar-header {border: none; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;background-color:#fff;}
+
+#mobile-nav{
+    @media(min-width: 1400px){
+      background-color: transparent;
+  }
+}
 
 #main-nav, #mobile-nav, .navbar-header a {color:#fff !important;}
 
@@ -131,6 +140,10 @@ color:#fff;
 
 .navbar-header{
   background-image: url("{{ static('images/address-bg.jpg') }}");
+  @media(min-width: 1400px){
+      background-image:none;
+      background-color: transparent;
+  }
 }
 
 #mobile-nav .social {padding-bottom: 25px;}
