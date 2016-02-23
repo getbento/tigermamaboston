@@ -8,10 +8,10 @@ $(document).ready(function(){
 
 
   // Mobile Reservations Form Display Mobile Height Fix
-  $('.btn-primary.reservations').click(function() {
-    var splashHeight = $('#modal-reservations').height() + 200;
-    $('.splash').css({"min-height": splashHeight});
-  });
+  // $('.btn-primary.reservations').click(function() {
+  //   var splashHeight = $('#modal-reservations').height() + 200;
+  //   $('.splash').css({"min-height": splashHeight});
+  // });
 
   $('#modal-reservations button.close').click(function() {
     $('.splash').css({"min-height": "0"});
