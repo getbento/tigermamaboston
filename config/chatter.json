@@ -10,7 +10,6 @@
       type: "section",
       items: {
         title: "wysiwyg",
-        subtitle: "wysiwyg",
         image: "image",
         "button1_text": {
           "title": "Button #1 Text",
