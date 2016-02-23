@@ -313,9 +313,8 @@ hr {
 }
 
 .form-group > .col-sm-6 {
-  margin-bottom: 15px;
-  @media (min-width: $screen-sm-max) {
-    margin-bottom: 0;
+  @media (max-width: $screen-sm-max) {
+    margin-bottom: 15px;
   }
 }
 
