@@ -313,7 +313,7 @@ hr {
 }
 
 .form-group > .col-sm-6:first-child {
-  @media (max-width: $screen-sm-max) {
+  @media (max-width: $screen-sm-max){
     margin-bottom: 15px;
   }
 }
