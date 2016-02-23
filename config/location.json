@@ -35,7 +35,6 @@
       title: "Information",
       type: "section",
       items: {
-        title: "text",
         description: "wysiwyg"
       }
     }
