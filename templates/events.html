@@ -154,29 +154,32 @@
   </section>
 
 
-  <!-- Partner Logos -->
-  <section class="info wow fadeIn" id="info">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-          <h2 class="brandon light uppercase">{{ current.fields.logos.title }}</h2>
-          <div>
-            {{ current.fields.logos.description }}
+  {% set partnerLogos = current.fields.logos.logomarks %}
+  {% if partnerLogos|length %}
+    <!-- Partner Logos -->
+    <section class="info wow fadeIn" id="info">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <h2 class="brandon light uppercase">{{ current.fields.logos.title }}</h2>
+            <div>
+              {{ current.fields.logos.description }}
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            {% for logo in partnerLogos %}
+              <div class="partner-logo-wrapper col-sm-4 col-md-3 col-xs-6">
+                <div class="partner-logo" style="background-image: url('{{ logo.image }}')">
+                </div>
+              </div>
+            {% endfor %}
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-12">
-          {% for logo in current.fields.logos.logomarks %}
-            <div class="partner-logo-wrapper col-sm-4 col-md-3 col-xs-6">
-              <div class="partner-logo" style="background-image: url('{{ logo.image }}')">
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  {% endif %}
 
 
 </div>
