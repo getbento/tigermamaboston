@@ -312,6 +312,13 @@ hr {
   display: none;
 }
 
+.form-group > .col-sm-6 {
+  margin-bottom: 15px;
+  @media (max-width: $screen-sm-max) {
+    margin-bottom: 0;
+  }
+}
+
 
 // Effects
 .desaturate {
