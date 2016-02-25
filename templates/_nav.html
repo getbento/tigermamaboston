@@ -1,3 +1,3 @@
 {% for nav in navs.main %}
-  <li class="{{ nav.name }} {% if current.url == nav.url %}selected{% endif %}"><a class="brandon uppercase" href="{{ nav.url }}"/>{{ nav.name }}</a></li>
+  <li class="{{ nav.name }} {% if current.url == nav.url %}selected{% endif %}"><a class="brandon uppercase" href="{{ nav.url }}" {% if nav.type == "link" and not nav.internal %}target="_blank"{% endif %}/>{{ nav.name }}</a></li>
 {% endfor %}
