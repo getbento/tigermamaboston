@@ -157,6 +157,41 @@ section.members .member {
   }
 }
 
+// jobs modal
+#modal-jobs {
+  position: fixed;
+
+  // modifier
+  .modal-open & {
+    overflow-y: scroll;
+  }
+
+  // fix: file input
+  & input[type="file"] {
+    display: inline-block;
+  }
+
+  & .error input {
+    border: 1px solid #FF0000;
+  }
+
+  // child: override
+  & .modal-dialog {
+    max-width: 520px;
+    margin-bottom: 80px;
+
+    @media (min-width: 768px) {
+      margin-top: 80px !important;
+    }
+  }
+
+  // child:
+  & .error-msg,
+  & .success-msg {
+    color: #999999;
+  }
+}
+
 
 // Jobs
 section.jobs .job h2 {margin-bottom: 20px; margin-top: 50px;}

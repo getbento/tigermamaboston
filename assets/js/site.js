@@ -228,4 +228,52 @@ $(document).ready(function(){
     }
   });
 
+  // jobs form
+  $(".form-jobs").submit(function(e){
+    var $form = $(this);
+    e.preventDefault();
+    var error;
+
+    // reset errors
+    function resetErrors(){
+      error = false;
+      $form.find(".error-msg, .success-msg").hide();
+      $form.find("input").parent().removeClass("error");  
+    }
+    resetErrors();
+
+    // check required
+    var required = ["first_name", "last_name", "email"];
+    _.each(required, function(requiredId){
+      var $input = $form.find("#" + requiredId);
+      if ($input.length > 0 && $input.val() === "") {
+        $input.parent().addClass("error");
+        error = true;
+      }
+    });
+
+    // check for errors
+    if (error){
+      $form.find(".error-msg").show();
+      return false;
+    }
+    else {
+      $.ajax({
+        type: "POST",
+        url: $form.attr("action"),
+        data: $form.serialize(),
+        success: function(data, textStatus) {
+          resetErrors();
+          $form.find(".btn-submit").hide();
+          $form.find(".success-msg").show();
+        },
+        error: function(xhr, status, error){
+          $form.find(".error-msg").show();
+          console.log(xhr, status, error);
+        }
+      });
+    }
+  });
+
+
 });
