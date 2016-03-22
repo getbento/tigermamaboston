@@ -6,6 +6,7 @@
       
       {% import 'forms.html' as forms with context %}
       {% call forms.email_form(class="form-jobs") %}
+        <input id="recipient" type="hidden" name="form" value="jobs">
         <input id="position" type="hidden" name="position" value="">
 
         <div class="modal-body">
