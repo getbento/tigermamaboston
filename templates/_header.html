@@ -19,7 +19,7 @@
 
         {% set location=boxes.locations.all.0 %}
         <div class="pull-left">
-          <button class="btn btn-primary btn-orange" data-toggle="modal" data-target="#modal-reservations">Reservations</button>
+          <button class="{% if account.reservations.provider == 'reserve' %}rsrv-link{% endif %} btn btn-primary btn-orange" {% if account.reservations.provider != 'reserve' %}data-toggle="modal"{% endif %} data-target="#modal-reservations">Reservations</button>
           <span class="location uppercase droid-serif"><span class=""></span><a target="_blank" href="https://www.google.com/maps/place/{{ location.street }} {{ location.city }} {{ location.state }}, {{ location.postal_code }}">{{ location.street }} {{ location.city }} {{ location.state }}, {{ location.postal_code }}</span></a>
           <span class="phone uppercase droid-serif"><span class=""></span>{{ location.phone_number }} </span>
         </div>
@@ -38,7 +38,7 @@
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <button class="btn btn-primary reservations" data-toggle="modal" data-target="#modal-reservations">Reservations</button>
+          <button class="{% if account.reservations.provider == 'reserve' %}rsrv-link{% endif %} btn btn-primary reservations" {% if account.reservations.provider != 'reserve' %}data-toggle="modal"{% endif %} data-target="#modal-reservations">Reservations</button>
         </div>
       </div>
     </div>

@@ -106,9 +106,14 @@
 
     {% include '_jobsform.html' with context %}
     {% include '_footer.html' with context %}
-    
+
     <div id="powered-by">
         <p><a href="http://getbento.com/?utm_source=footer&utm_campaign={{ account.name.replace(' ', '').lower() }}" target="_blank">Powered by BentoBox</a></p>
     </div>
+
+    {% if account.reservations.provider == 'reserve' %}
+    <script type="text/javascript" src="http://widgets.reserve.com/reserve-widget.js?restaurant_id={{ account.reservations.provider.id }}"></script>
+    {% endif %}
+
   </body>
 </html>
