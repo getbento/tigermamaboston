@@ -56,6 +56,42 @@
   }
 }
 
+.lightbox-overlay {
+  background:rgba(0,0,0,.8);
+  display:block;
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  height:100%;
+  z-index:100;
+}
+.lightbox {
+  color:$black;
+  box-sizing:border-box;
+  display:block;
+  background:#ffffff;
+  width:90%;
+  max-width:560px;
+  padding:50px 30px 30px;
+  margin:0 auto;
+  position:relative;
+  top:50%;
+  -webkit-transform:translateY(-50%);
+  transform:translateY(-50%);
+}
+.lightbox img {
+  max-width:100%;
+  height: auto !important;
+}
+.lightbox .close {
+  color:$black;
+  display:block;
+  font-size:32px;
+  position:absolute;
+  top:8px;
+  right:20px;
+}
+
 
 // Restaurant
 
@@ -154,41 +190,6 @@ section.members .member {
     @media (max-width:767px) {
       font-size:80px;
     }
-  }
-}
-
-// jobs modal
-#modal-jobs {
-  position: fixed;
-
-  // modifier
-  .modal-open & {
-    overflow-y: scroll;
-  }
-
-  // fix: file input
-  & input[type="file"] {
-    display: inline-block;
-  }
-
-  & .error input {
-    border: 1px solid #FF0000;
-  }
-
-  // child: override
-  & .modal-dialog {
-    max-width: 520px;
-    margin-bottom: 80px;
-
-    @media (min-width: 768px) {
-      margin-top: 80px !important;
-    }
-  }
-
-  // child:
-  & .error-msg,
-  & .success-msg {
-    color: #999999;
   }
 }
 
@@ -296,7 +297,6 @@ section.jobs .job .hover {padding: 0; transition: opacity  .7s; max-height: 0; o
 
 .menu .listing h1 {font-size: 33px; font-family: "brandon-grotesque"; color: $pink; text-transform: uppercase; display: inline; }
 .menu .container p {font-size: 18px;}
-.menu .container p img { max-width: 100%; }
 
 .menu .listing h2 {display: inline; font-size: 18px;}
 

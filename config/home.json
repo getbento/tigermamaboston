@@ -32,6 +32,16 @@
       }
     },
 
+    alert:{
+      title: "Homepage Alert",
+      type: "section",
+      items:{
+        "title": "text",
+        "text": "wysiwyg",
+        "display_homepage_alert": "boolean",
+      }
+    },
+
     // Grid Section
     grid1: {
       title: "Grid 1",
@@ -79,6 +89,9 @@
         icon: "text"
         width: "columns-12"
       },
+      "section-alert":{
+        width: "columns-12"
+      }
       "section-grid1": {
         width: "columns-6"
       },
