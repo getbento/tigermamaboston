@@ -57,9 +57,35 @@
 
 
     </div>
+      {% if current.fields.alert.display_homepage_alert %}
+      <div class="lightbox-overlay">
+        <div class="lightbox">
+          <h1>{{ current.fields.alert.title }}</h1>
+          {{ current.fields.alert.text }}
+          <a class="close">&times;</a>
+        </div>
+      </div>
+    {% endif %}
   </section>
 
 </div>
 
+
+{% endblock %}
+
+{% block scripts %}
+
+<script type="text/javascript">
+   $('.lightbox .close').click(function(e){
+    e.preventDefault();
+    $('.lightbox-overlay').fadeOut();
+   });
+   $('.lightbox-overlay').click(function(e){
+    if($(this).is(e.target)){
+      e.preventDefault();
+      $('.lightbox-overlay').fadeOut();
+    }
+   });
+</script>
 
 {% endblock %}
