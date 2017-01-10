@@ -57,7 +57,7 @@
 
 
     </div>
-      {% if current.fields.alert.display_homepage_alert %}
+      {% if current.fields.alert.title or current.fields.alert.text %}
       <div class="lightbox-overlay">
         <div class="lightbox">
           <h1>{{ current.fields.alert.title }}</h1>

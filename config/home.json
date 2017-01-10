@@ -5,6 +5,13 @@
   // Sections and Editable Fields
 
   fields: {
+    alert: {
+      "type": "section",
+      "items": {
+        "title": "text",
+        "text": "wysiwyg",
+      }
+    },
     //Splash Section
     splash: {
       title: "Hero",
@@ -74,6 +81,7 @@
 
   // Wires
   wireframe: [
+    "section-alert",
     {
       "section-splash": {
         icon: "text"
