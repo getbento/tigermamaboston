@@ -112,7 +112,7 @@
     </div>
 
     {% if account.reservations.provider == 'reserve' %}
-    <script type="text/javascript" src="https://widgets.reserve.com/reserve-widget.js?restaurant_id={{ account.reservations.id }}"></script>
+    <script type="text/javascript" src="https://widget.reserve.com/reserve-widget.js?restaurant_id={{ account.reservations.id }}"></script>
     {% endif %}
 
     {% block scripts %}
