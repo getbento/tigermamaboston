@@ -13,5 +13,19 @@
       name: "Social Links",
       slug: "social"
     }
+  ],
+  forms: [
+    {
+      name: "Private Events",
+      slug: "private-events"
+    },
+    {
+      name: "Jobs",
+      slug: "jobs"
+    },
+    {
+      name: "Newsletter",
+      slug: "newsletter"
+    },
   ]
 }
