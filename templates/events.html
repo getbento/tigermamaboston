@@ -50,11 +50,10 @@
     <div class="success">
     Success! Thank you for your submission. Someone will be in touch with you shortly.
     </div>
-    <input id="recipient" type="hidden" name="form" value="private-events">
 
       {% import 'forms.html' as forms with context %}
       {% call forms.email_form("events") %}
-
+      <input id="form" type="hidden" name="form" value="private-events">
         <h2 class="brandon orange">Your contact info</h2>
         <div class="row">
           <div class="form-group col-sm-6">
