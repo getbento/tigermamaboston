@@ -12,7 +12,13 @@
      -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{% block title %}{% if current.name != "Home" %}{% if current.meta_title %}{{ current.meta_title }} - {% else %}{{ current.name }} - {% endif %}{% endif %}{{ account.site.title }}{% endblock %}</title>
+    <title>
+        {% block title %}
+            {% if current.name == "Home" %}{% if current.meta_title %}{{ current.meta_title }} - {% endif %}{% endif %}
+            {% if current.name != "Home" %}{% if current.meta_title %}{{ current.meta_title }} - {% else %}{{ current.name }} - {% endif %}{% endif %}
+            {{ account.site.title }}
+        {% endblock %}
+    </title>
     <meta name="description" content="{% block meta_description %}{% if current.meta_description %}{{ current.meta_description }}{% else %}{{ account.site.meta_description }}{% endif %}{% endblock %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Revisit-After" content="5 Days">
