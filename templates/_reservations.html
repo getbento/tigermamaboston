@@ -5,9 +5,17 @@
 
   <div class="modal-dialog">
     <div class="modal-content left">
-        <form method="get" id="TU_form" target="_blank" action="https://www.mytableup.com/reservationWidget/widgetAdd/">
+        <form method="get" id="TU_form" target="_blank" action="https://www.opentable.com/restaurant-search.aspx">
 
-        <input type="hidden" name="restaurantId" id="restaurantId" value="2310">
+        <input type="hidden" name="RestaurantID" id="RestaurantID" value="254077">
+
+        <input type="hidden" name="rid" id="rid" value="254077">
+
+        <input type="hidden" name="GeoID" id="GeoID" value="8">
+
+        <input type="hidden" name="txtDateFormat" id="txtDateFormat" value="MM/dd/yyyy">
+
+        <input type="hidden" name="RestaurantReferralID" id="RestaurantReferralID" value="254077">
 
 
         <div class="modal-header">
@@ -19,7 +27,7 @@
         <div class="form-group row">
           <div class="col-sm-12">
             <label for="date">Date</label>
-            <input type="text" class="form-control date-icon" id="reservationsdatepicker" name="date" />
+            <input type="text" class="form-control date-icon" id="reservationsdatepicker" name="startDate" />
           </div>
         </div>
 
@@ -31,7 +39,7 @@
             <div>
               <input type="hidden" name="timeHour" class="time-hour">
               <input type="hidden" name="timeMinute" class="time-minute">
-              <select class="form-control time">
+              <select class="form-control time" name="ResTime">
                 <option selected="selected" disabled>Select a time</option>
                 <option value='{"timeHour":"23", "timeMinute":"00"}'>11:00 PM</option>
                 <option value='{"timeHour":"22", "timeMinute":"45"}'>10:45 PM</option>
