@@ -116,8 +116,8 @@
         <p><a href="http://getbento.com/?utm_source=footer&utm_campaign={{ account.name.replace(' ', '').lower() }}" target="_blank">Powered by BentoBox</a></p>
     </div>
 
-    {% if account.reservations.provider == 'reserve' %}
-    <script type="text/javascript" src="https://widget.reserve.com/reserve-widget.js?restaurant_id={{ account.reservations.id }}"></script>
+    {% if account.services.reserve.id %}
+    <script type="text/javascript" src="https://widget.reserve.com/reserve-widget.js?restaurant_id={{ account.services.reserve.id }}"></script>
     {% endif %}
 
     {% block scripts %}
