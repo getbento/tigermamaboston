@@ -7,15 +7,15 @@
     <div class="modal-content left">
         <form method="get" id="TU_form" action="https://www.opentable.com/restaurant-search.aspx">
 
-        <input type="hidden" name="RestaurantID" id="RestaurantID" value="186550"> <!-- 254077 -->
+        <input type="hidden" name="RestaurantID" id="RestaurantID" value="{{ account.services.opentable.id }}"> <!-- 254077 --> <!-- 186550 -->
 
-        <input type="hidden" name="rid" id="rid" value="186550">
+        <input type="hidden" name="rid" id="rid" value="{{ account.services.opentable.id }}">
 
         <input type="hidden" name="GeoID" id="GeoID" value="8">
 
         <input type="hidden" name="txtDateFormat" id="txtDateFormat" value="MM/dd/yyyy">
 
-        <input type="hidden" name="RestaurantReferralID" id="RestaurantReferralID" value="186550">
+        <input type="hidden" name="RestaurantReferralID" id="RestaurantReferralID" value="{{ account.services.opentable.id }}">
 
 
         <div class="modal-header">
