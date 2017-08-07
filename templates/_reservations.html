@@ -5,17 +5,17 @@
 
   <div class="modal-dialog">
     <div class="modal-content left">
-        <form method="get" id="TU_form" target="_blank" action="https://www.opentable.com/restaurant-search.aspx">
+        <form method="get" action="https://www.opentable.com/restaurant-search.aspx">
 
-        <input type="hidden" name="RestaurantID" id="RestaurantID" value="254077">
+        <input type="hidden" name="RestaurantID" id="RestaurantID" value="{{ account.services.opentable.id }}">
 
-        <input type="hidden" name="rid" id="rid" value="254077">
+        <input type="hidden" name="rid" id="rid" value="{{ account.services.opentable.id }}">
 
         <input type="hidden" name="GeoID" id="GeoID" value="8">
 
         <input type="hidden" name="txtDateFormat" id="txtDateFormat" value="MM/dd/yyyy">
 
-        <input type="hidden" name="RestaurantReferralID" id="RestaurantReferralID" value="254077">
+        <input type="hidden" name="RestaurantReferralID" id="RestaurantReferralID" value="{{ account.services.opentable.id }}">
 
 
         <div class="modal-header">
@@ -37,69 +37,56 @@
 
             <label for="event-type">Time</label>
             <div>
-              <input type="hidden" name="timeHour" class="time-hour">
-              <input type="hidden" name="timeMinute" class="time-minute">
               <select class="form-control time" name="ResTime">
                 <option selected="selected" disabled>Select a time</option>
-                <option value='{"timeHour":"23", "timeMinute":"00"}'>11:00 PM</option>
-                <option value='{"timeHour":"22", "timeMinute":"45"}'>10:45 PM</option>
-                <option value='{"timeHour":"22", "timeMinute":"30"}'>10:30 PM</option>
-                <option value='{"timeHour":"22", "timeMinute":"15"}'>10:15 PM</option>
-                <option value='{"timeHour":"22", "timeMinute":"00"}'>10:00 PM</option>
-                <option value='{"timeHour":"21", "timeMinute":"45"}'>9:45 PM</option>
-                <option value='{"timeHour":"21", "timeMinute":"30"}'>9:30 PM</option>
-                <option value='{"timeHour":"21", "timeMinute":"15"}'>9:15 PM</option>
-                <option value='{"timeHour":"21", "timeMinute":"00"}'>9:00 PM</option>
-                <option value='{"timeHour":"20", "timeMinute":"45"}'>8:45 PM</option>
-                <option value='{"timeHour":"20", "timeMinute":"30"}'>8:30 PM</option>
-                <option value='{"timeHour":"20", "timeMinute":"15"}'>8:15 PM</option>
-                <option value='{"timeHour":"20", "timeMinute":"00"}'>8:00 PM</option>
-                <option value='{"timeHour":"19", "timeMinute":"45"}'>7:45 PM</option>
-                <option value='{"timeHour":"19", "timeMinute":"30"}'>7:30 PM</option>
-                <option value='{"timeHour":"19", "timeMinute":"15"}'>7:15 PM</option>
-                <option value='{"timeHour":"19", "timeMinute":"00"}'>7:00 PM</option>
-                <option value='{"timeHour":"18", "timeMinute":"45"}'>6:45 PM</option>
-                <option value='{"timeHour":"18", "timeMinute":"30"}'>6:30 PM</option>
-                <option value='{"timeHour":"18", "timeMinute":"15"}'>6:15 PM</option>
-                <option value='{"timeHour":"18", "timeMinute":"00"}'>6:00 PM</option>
-                <option value='{"timeHour":"17", "timeMinute":"45"}'>5:45 PM</option>
-                <option value='{"timeHour":"17", "timeMinute":"30"}'>5:30 PM</option>
-                <option value='{"timeHour":"17", "timeMinute":"15"}'>5:15 PM</option>
-                <option value='{"timeHour":"17", "timeMinute":"00"}'>5:00 PM</option>
-                <option value='{"timeHour":"16", "timeMinute":"45"}'>4:45 PM</option>
-                <option value='{"timeHour":"16", "timeMinute":"30"}'>4:30 PM</option>
+                <option value='11:00 PM'>11:00 PM</option>
+                <option value='10:45 PM'>10:45 PM</option>
+                <option value='10:30 PM'>10:30 PM</option>
+                <option value='10:15 PM'>10:15 PM</option>
+                <option value='10:00 PM'>10:00 PM</option>
+                <option value='9:45 PM'>9:45 PM</option>
+                <option value='9:30 PM'>9:30 PM</option>
+                <option value='9:15 PM'>9:15 PM</option>
+                <option value='9:00 PM'>9:00 PM</option>
+                <option value='8:45 PM'>8:45 PM</option>
+                <option value='8:30 PM'>8:30 PM</option>
+                <option value='8:15 PM'>8:15 PM</option>
+                <option value='8:00 PM'>8:00 PM</option>
+                <option value='7:45 PM'>7:45 PM</option>
+                <option value='7:30 PM'>7:30 PM</option>
+                <option value='7:15 PM'>7:15 PM</option>
+                <option value='7:00 PM'>7:00 PM</option>
+                <option value='6:45 PM'>6:45 PM</option>
+                <option value='6:30 PM'>6:30 PM</option>
+                <option value='6:15 PM'>6:15 PM</option>
+                <option value='6:00 PM'>6:00 PM</option>
+                <option value='5:45 PM'>5:45 PM</option>
+                <option value='5:30 PM'>5:30 PM</option>
+                <option value='5:15 PM'>5:15 PM</option>
+                <option value='5:00 PM'>5:00 PM</option>
+                <option value='4:45 PM'>4:45 PM</option>
+                <option value='4:30 PM'>4:30 PM</option>
 
-                <option value='{"timeHour":"15", "timeMinute":"00"}'>3:00 PM</option>
-                <option value='{"timeHour":"14", "timeMinute":"45"}'>2:45 PM</option>
-                <option value='{"timeHour":"14", "timeMinute":"30"}'>2:30 PM</option>
-                <option value='{"timeHour":"14", "timeMinute":"15"}'>2:15 PM</option>
-                <option value='{"timeHour":"14", "timeMinute":"00"}'>2:00 PM</option>
-                <option value='{"timeHour":"13", "timeMinute":"45"}'>1:45 PM</option>
-                <option value='{"timeHour":"13", "timeMinute":"30"}'>1:30 PM</option>
-                <option value='{"timeHour":"13", "timeMinute":"15"}'>1:15 PM</option>
-                <option value='{"timeHour":"13", "timeMinute":"00"}'>1:00 PM</option>
-                <option value='{"timeHour":"12", "timeMinute":"45"}'>12:45 PM</option>
-                <option value='{"timeHour":"12", "timeMinute":"30"}'>12:30 PM</option>
-                <option value='{"timeHour":"12", "timeMinute":"15"}'>12:15 PM</option>
-                <option value='{"timeHour":"12", "timeMinute":"00"}'>12:00 PM</option>
+                <option value='3:00 PM'>3:00 PM</option>
+                <option value='2:45 PM'>2:45 PM</option>
+                <option value='2:30 PM'>2:30 PM</option>
+                <option value='2:15 PM'>2:15 PM</option>
+                <option value='2:00 PM'>2:00 PM</option>
+                <option value='1:45 PM'>1:45 PM</option>
+                <option value='1:30 PM'>1:30 PM</option>
+                <option value='1:15 PM'>1:15 PM</option>
+                <option value='1:00 PM'>1:00 PM</option>
+                <option value='12:45 PM'>12:45 PM</option>
+                <option value='12:30 PM'>12:30 PM</option>
+                <option value='12:15 PM'>12:15 PM</option>
+                <option value='12:00 PM'>12:00 PM</option>
 
-                <option value='{"timeHour":"11", "timeMinute":"45"}'>11:45 AM</option>
-                <option value='{"timeHour":"11", "timeMinute":"30"}'>11:30 AM</option>
-                <option value='{"timeHour":"11", "timeMinute":"15"}'>11:15 AM</option>
-                <option value='{"timeHour":"11", "timeMinute":"00"}'>11:00 AM</option>
+                <option value='11:45 AM'>11:45 AM</option>
+                <option value='11:30 AM'>11:30 AM</option>
+                <option value='11:15 AM'>11:15 AM</option>
+                <option value='11:00 AM'>11:00 AM</option>
 
 
-
-<!--
-                <option value='{"timeHour":"09", "timeMinute":"00"}'>9:00 AM</option>
-                <option value='{"timeHour":"08", "timeMinute":"45"}'>8:45 AM</option>
-                <option value='{"timeHour":"08", "timeMinute":"30"}'>8:30 AM</option>
-                <option value='{"timeHour":"08", "timeMinute":"15"}'>8:15 AM</option>
-                <option value='{"timeHour":"08", "timeMinute":"00"}'>8:00 AM</option>
-                <option value='{"timeHour":"07", "timeMinute":"00"}'>7:45 AM</option>
-                <option value='{"timeHour":"07", "timeMinute":"30"}'>7:30 AM</option>
-                <option value='{"timeHour":"07", "timeMinute":"15"}'>7:15 AM</option>
-                <option value='{"timeHour":"07", "timeMinute":"00"}'>7:00 AM</option> -->
               </select>
             </div>
           </div>
