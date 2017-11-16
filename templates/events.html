@@ -30,10 +30,10 @@
           {% for image in gallery.images %}
 
             {% if loop.index is divisibleby 3 %}
-              <div class="col-sm-12 desaturate-desktop-only" style="background-image:url('{{image}}')">
+              <div class="col-sm-12 desaturate-desktop-only" style="background-image:url('{{ image|image_url }}')">
               </div>
             {% else %}
-              <div class="col-sm-6 desaturate-desktop-only" style="background-image:url('{{image}}')">
+              <div class="col-sm-6 desaturate-desktop-only" style="background-image:url('{{ image|image_url }}')">
               </div>
             {% endif %}
 
@@ -171,7 +171,7 @@
           <div class="col-sm-12">
             {% for logo in partnerLogos %}
               <div class="partner-logo-wrapper col-sm-4 col-md-3 col-xs-6">
-                <div class="partner-logo" style="background-image: url('{{ logo.image }}')">
+                <div class="partner-logo" style="background-image: url('{{ logo.image|image_url }}')">
                 </div>
               </div>
             {% endfor %}
