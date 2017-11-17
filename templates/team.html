@@ -19,7 +19,7 @@
           <div class="static">
             <div class="container">
               <div class="col-sm-5 {% if loop.index is divisibleby 2 %}right{% else %}left{% endif %}">
-               <div class="circle2" {% if member.fields.picture %} style="background-image:url('{{ member.fields.picture }}')" {% endif %}></div>
+               <div class="circle2" {% if member.fields.picture %} style="background-image:url('{{ member.fields.picture|image_url }}')" {% endif %}></div>
               </div>
               <div class="col-sm-7 center">
                 <h2 class="brandon">{{ member.name }}</h2>

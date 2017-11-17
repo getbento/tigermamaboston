@@ -33,10 +33,10 @@
           {% for image in gallery.images %}
 
             {% if loop.index is divisibleby 3 %}
-              <div class="col-sm-12 desaturate-desktop-only" style="background-image:url('{{image}}')">
+              <div class="col-sm-12 desaturate-desktop-only" style="background-image:url('{{ image|image_url }}')">
               </div>
             {% else %}
-              <div class="col-sm-6 desaturate-desktop-only" style="background-image:url('{{image}}')">
+              <div class="col-sm-6 desaturate-desktop-only" style="background-image:url('{{ image|image_url }}')">
               </div>
             {% endif %}
 

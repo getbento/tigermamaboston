@@ -3,7 +3,7 @@
 <div id="menu">
 
 <!-- Initial Splash Screen -->
-<section class="splash" style="background-image:url('{{current.fields.splash.image}}')">
+<section class="splash" style="background-image:url('{{ current.fields.splash.image|image_url }}')">
   <div class="wrapper">
     <div class="container">
       <div class="big-hero">{{ current.fields.splash.title }}</div>
