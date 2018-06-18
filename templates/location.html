@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+
+{% set default_location = boxes.locations.all.0 %}
 {% block content %}
 <div id="location">
 
@@ -29,14 +31,11 @@
 
 
 <!-- Init Google Maps -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWDDItiVkZY6WNCPgIm1Ry-fSZCtwcTek&sensor=false"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH9stEAm4qNgqrF89wfLyeBJYbbqOyk5w&callback=initMap" async defer></script>
 
 <script type="text/javascript">
 
-// When the window has finished loading create our google map below
-google.maps.event.addDomListener(window, 'load', init);
-
-function init() {
+function initMap() {
     if ($('#map').length > 0) {
       // Basic options for a simple Google Map
       // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
@@ -74,9 +73,9 @@ function init() {
       var marker = new google.maps.Marker({
           position: new google.maps.LatLng(42.3439038,-71.1010995),
           map: map,
-          title: 'Tiger Mama',
+          title: '{{ default_location.name }}',
           icon: "{{static('/images/map-marker.png')}}",
-          url: "https://www.google.com/maps/place/Tiger Mama/@42.3439038,-71.1032882,17z/data=!3m2!4b1!5s0x89e379f437a946df:0x7edf0a3af8370d55!4m2!3m1!1s0x89e379f445c40751:0x25b7fa7c235dec3d"
+          url: "{{ default_location.fields.custom_map_url|d('https://www.google.com/maps/place/Tiger Mama/@42.3439038,-71.1032882,17z/data=!3m2!4b1!5s0x89e379f437a946df:0x7edf0a3af8370d55!4m2!3m1!1s0x89e379f445c40751:0x25b7fa7c235dec3d', true) }}"
       });
 
       // Link to Google Maps in a New Window

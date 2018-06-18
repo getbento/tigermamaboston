@@ -51,7 +51,7 @@
         icon: "text",
         width: "columns-12"
       },
-      "box-locations-location": {
+      "boxes-locations": {
         icon: "text",
         width: "columns-12"
       }
