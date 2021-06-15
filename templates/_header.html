@@ -19,7 +19,7 @@
 
         {% set location=boxes.locations.all.0 %}
         <div class="pull-left">
-          <button class="{% if account.services.reserve.id %}rsrv-link{% endif %} btn btn-primary btn-orange" {% if not account.services.reserve.id %}data-toggle="modal"{% endif %} data-target="#modal-reservations">Reservations</button>
+          <a target="_blank" href="https://www.opentable.com/restref/client/?rid=254077&restref=254077&corrid=7d5d7138-3c57-4904-8d33-2e899fea2626" class="btn btn-primary btn-orange">Reservations</a>
           <span class="location uppercase droid-serif"><span class=""></span><a target="_blank" href="https://www.google.com/maps/place/{{ location.street }} {{ location.city }} {{ location.state }}, {{ location.postal_code }}">{{ location.street }} {{ location.city }} {{ location.state }}, {{ location.postal_code }}</span></a>
           <span class="phone uppercase droid-serif"><span class=""></span>{{ location.phone_number }} </span>
         </div>
